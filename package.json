@@ -1,0 +1,14 @@
+{
+  "name": "ease-encrypt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:KlessitonRodrigues/ease-encrypt.git",
+  "author": "klessiton <klessitom@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "ease-encrypt-types",
+    "ease-encrypt-client",
+    "ease-encrypt-web"
+  ]
+}
