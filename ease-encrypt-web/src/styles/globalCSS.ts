@@ -1,7 +1,7 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle, css } from "styled-components";
 
 export default createGlobalStyle(
-  props => css`
+  (props) => css`
     * {
       margin: 0;
       padding: 0;
@@ -21,8 +21,8 @@ export default createGlobalStyle(
     }
     html,
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: ${props.theme.colors.current.bg1};
+      font-family: "Roboto", sans-serif;
+      background-color: ${props.theme.colors.current.bg2};
       color: ${props.theme.colors.current.text1};
     }
     h1 {

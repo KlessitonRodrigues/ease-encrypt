@@ -1,17 +1,24 @@
-import reactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import HomePage from "./UI/pages/home";
+import GlobalCSS from "./styles/globalCSS";
+import { defaulTheme } from "./styles/theme";
+import reactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 /// import Router from 'src/UI/router';
-import { ActionProvider } from 'src/hooks/useActionDispatch';
-import { GlobalProvider } from 'src/hooks/useGlobalContext';
+import { ActionProvider } from "src/hooks/useActionDispatch";
+import { GlobalProvider } from "src/hooks/useGlobalContext";
+import { ThemeProvider } from "styled-components";
 
 const App = () => (
   <GlobalProvider>
     <ActionProvider>
       <BrowserRouter>
-        <div>HELLO</div>
+        <ThemeProvider theme={defaulTheme}>
+          <GlobalCSS />
+          <HomePage />
+        </ThemeProvider>
       </BrowserRouter>
     </ActionProvider>
   </GlobalProvider>
 );
 
-reactDOM.render(<App />, document.getElementById('root'));
+reactDOM.render(<App />, document.getElementById("root"));
