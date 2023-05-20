@@ -5,32 +5,32 @@ export const darkBackground: Partial<Theme["colors"]["current"]> = {
   bg1: materialColors.black,
   bg2: materialColors.grey["800"] + "44",
   bg3: materialColors.grey["700"] + "44",
-  text1: materialColors.grey["400"],
-  text2: materialColors.grey["500"],
-  text3: materialColors.grey["600"],
+  text1: materialColors.grey["300"],
+  text2: materialColors.grey["400"],
+  text3: materialColors.grey["500"],
 };
 
 export const solarizedBackground: Partial<Theme["colors"]["current"]> = {
   bg1: materialColors.orange["50"],
-  bg2: materialColors.grey["800"] + "44",
-  bg3: materialColors.grey["700"] + "44",
-  text1: materialColors.grey["400"],
-  text2: materialColors.grey["500"],
-  text3: materialColors.grey["600"],
+  bg2: materialColors.grey["300"] + "44",
+  bg3: materialColors.grey["400"] + "44",
+  text1: materialColors.grey["900"],
+  text2: materialColors.grey["800"],
+  text3: materialColors.grey["700"],
 };
 
 export const defaulTheme: Theme = {
   size: (n: number) => `${n * 0.2}rem`,
   colors: {
     current: {
-      bg1: materialColors.blueGrey["50"],
-      bg2: materialColors.blueGrey["100"] + "44",
-      bg3: materialColors.blueGrey["200"] + "44",
+      bg1: materialColors.grey["50"],
+      bg2: materialColors.grey["200"] + "44",
+      bg3: materialColors.grey["300"] + "44",
       text1: materialColors.grey["800"],
       text2: materialColors.grey["700"],
       text3: materialColors.grey["600"],
       main: atlassianColors.blue["600"],
-      mainHover: atlassianColors.blue["600"],
+      mainHover: atlassianColors.blue["700"],
       mainBg: atlassianColors.blue["600"],
     },
     gray: materialColors.grey["600"],
@@ -48,19 +48,17 @@ export const defaulTheme: Theme = {
     lowRight: "3px 0 4px 0px #0002",
     mediumLeft: "-4px 0 4px 0px #0006",
   },
-  border: {
-    type: {
-      small: "none",
-      medium: "1px solid #aaa4",
-      large: "2px solid #aaa8",
-    },
-    radius: {
-      verySmall: "0.3rem",
-      small: "0.4rem",
-      medium: "0.6rem",
-      large: "0.8rem",
-      full: "50%",
-    },
+  bordertype: {
+    small: "none",
+    medium: "1px solid #aaa4",
+    large: "2px solid #aaa6",
+  },
+  borderRadius: {
+    verySmall: "0.3rem",
+    small: "0.4rem",
+    medium: "0.6rem",
+    large: "0.8rem",
+    full: "50%",
   },
   fontSize: {
     body: "1rem",

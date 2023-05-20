@@ -6,8 +6,9 @@ export const Container = styled.div(
     justify-content: space-between;
     align-items: center;
     padding: ${theme.size(2)} ${theme.size(6)};
-    background-color: ${theme.colors.current.main};
+    background-color: ${theme.colors.current.mainBg};
     color: ${theme.colors.white};
+    box-shadow: ${theme.shadow.medium};
   `
 );
 

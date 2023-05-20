@@ -1,12 +1,17 @@
-import { BsLock, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { RxLockClosed } from "react-icons/rx";
 import Header from "src/UI/base/Header";
 import PageContainer from "src/UI/base/PageContainer";
-import InputText from "src/UI/components/InputText";
+import EncryptPanel from "src/UI/components/EncryptPanel";
 
 const HomePage = () => (
   <PageContainer>
-    <Header icon={<BsLock />} title="Ease Encrypt" ghIcon={<BsGithub />} />
-    <InputText />
+    <Header
+      icon={<RxLockClosed />}
+      title="Ease Encrypt"
+      ghIcon={<BsGithub />}
+    />
+    <EncryptPanel />
   </PageContainer>
 );
 

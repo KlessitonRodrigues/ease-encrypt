@@ -1,24 +1,25 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
-type ContainerProps = { padding?: string; variant: ButtonProps['variant'] };
+type ContainerProps = { padding?: string; variant: ButtonProps["variant"] };
 
 export const Container = styled.button<ContainerProps>(
-  props => css`
+  (props) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: ${props.theme.size(0.5)};
     min-height: ${props.theme.size(10)};
     min-width: ${props.theme.size(28)};
-    padding: 0 ${props.theme.size(4)};
+    padding: 0 ${props.theme.size(3)};
     margin-top: ${props.theme.size(2)};
     margin-right: ${props.theme.size(4)};
-    border-radius: ${props.theme.border.radius.small};
+    border-radius: ${props.theme.borderRadius.small};
     transition: background-color 0.2s;
     user-select: none;
     border: none;
     box-shadow: none;
 
-    ${props.variant === 'solid' &&
+    ${props.variant === "solid" &&
     css`
       background-color: ${props.theme.colors.current.mainBg};
       color: ${props.theme.colors.white};
@@ -29,9 +30,9 @@ export const Container = styled.button<ContainerProps>(
       }
     `}
 
-    ${props.variant === 'outline' &&
+    ${props.variant === "outline" &&
     css`
-      color: ${props.theme.colors.current.main};
+      color: ${props.theme.colors.current.text2};
       border: 1px solid ${props.theme.colors.current.main};
       background-color: transparent;
       box-shadow: none;
@@ -44,16 +45,17 @@ export const Container = styled.button<ContainerProps>(
 );
 
 export const Label = styled.span(
-  props => css`
-    padding: ${props.theme.size(0.5)} ${props.theme.size(3)};
+  (props) => css`
+    padding: ${props.theme.size(0.5)} ${props.theme.size(2)};
+    padding-top: ${props.theme.size(1)};
     font-size: ${props.theme.fontSize.label};
     font-weight: bold;
-    letter-spacing: 1px;
+    font-family: monospace;
   `
 );
 
 export const Icon = styled.div(
-  props => css`
+  (props) => css`
     display: flex;
     font-size: ${props.theme.size(5)};
   `

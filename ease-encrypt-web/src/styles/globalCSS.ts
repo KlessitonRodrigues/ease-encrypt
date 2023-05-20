@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 
 export default createGlobalStyle(
-  (props) => css`
+  ({ theme }) => css`
     * {
       margin: 0;
       padding: 0;
@@ -12,7 +12,7 @@ export default createGlobalStyle(
       font-size: 16px;
     }
     body {
-      font-size: ${props.theme.fontSize.body};
+      font-size: ${theme.fontSize.body};
       height: 100vh;
       width: 100vw;
       max-height: 100vh;
@@ -22,26 +22,26 @@ export default createGlobalStyle(
     html,
     body {
       font-family: "Roboto", sans-serif;
-      background-color: ${props.theme.colors.current.bg2};
-      color: ${props.theme.colors.current.text1};
+      background-color: ${theme.colors.current.bg1};
+      color: ${theme.colors.current.text1};
     }
     h1 {
-      font-size: ${props.theme.fontSize.h1};
+      font-size: ${theme.fontSize.h1};
     }
     h2 {
-      font-size: ${props.theme.fontSize.h2};
+      font-size: ${theme.fontSize.h2};
     }
     h3 {
-      font-size: ${props.theme.fontSize.h3};
+      font-size: ${theme.fontSize.h3};
     }
     h4 {
-      font-size: ${props.theme.fontSize.h4};
+      font-size: ${theme.fontSize.h4};
     }
     h5 {
-      font-size: ${props.theme.fontSize.h5};
+      font-size: ${theme.fontSize.h5};
     }
     h6 {
-      font-size: ${props.theme.fontSize.h6};
+      font-size: ${theme.fontSize.h6};
     }
     ul {
       list-style: none;
@@ -56,17 +56,17 @@ export default createGlobalStyle(
       outline: none;
     }
     div::-webkit-scrollbar {
-      width: ${props.theme.size(2)};
+      width: ${theme.size(2)};
     }
     div::-webkit-scrollbar-track {
       background: #0000;
     }
     div::-webkit-scrollbar-thumb {
-      background: ${props.theme.colors.gray};
+      background: ${theme.colors.gray};
       border-radius: 2px;
     }
     div::-webkit-scrollbar-thumb:hover {
-      background: ${props.theme.colors.current.main};
+      background: ${theme.colors.current.main};
     }
     #root {
       width: 100%;

@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div(
-  (props) => css`
+  ({ theme }) => css`
     width: 100%;
-    margin-bottom: ${props.theme.size(2)};
+    margin-bottom: ${theme.size(2)};
   `
 );
 
@@ -23,13 +23,13 @@ export const TextAreaInput = styled.textarea(
     line-height: 1.2rem;
     outline: none;
     resize: vertical;
-    background-color: ${theme.colors.current.bg1};
-    border-radius: ${theme.border.radius.small};
     padding: ${theme.size(2)};
     height: ${theme.size(25)};
     min-height: ${theme.size(25)};
     max-height: ${theme.size(120)};
-    border: ${theme.border.type.large};
+    border: ${theme.bordertype.large};
     color: ${theme.colors.current.text1};
+    background-color: ${theme.colors.current.bg2};
+    border-radius: ${theme.borderRadius.small};
   `
 );

@@ -11,9 +11,6 @@ type Theme = {
       main: string;
       mainHover: string;
       mainBg: string;
-      alternative: string;
-      alternativeHover: string;
-      alternativeBg: string;
     };
     gray: string;
     yellow: string;
@@ -30,19 +27,17 @@ type Theme = {
     mediumLeft: string;
     lowRight: string;
   };
-  border: {
-    type: {
-      small: string;
-      medium: string;
-      large: string;
-    };
-    radius: {
-      verySmall: string;
-      small: string;
-      medium: string;
-      large: string;
-      full: string;
-    };
+  bordertype: {
+    small: string;
+    medium: string;
+    large: string;
+  };
+  borderRadius: {
+    verySmall: string;
+    small: string;
+    medium: string;
+    large: string;
+    full: string;
   };
   fontSize: {
     body: string;
