@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div(
   () => css`
@@ -14,15 +14,15 @@ export const Container = styled.div(
 );
 
 export const Icon = styled.div<{ required: boolean }>(
-  (props) => css`
+  props => css`
     display: flex;
     align-items: center;
-    color: ${props.required ? props.theme.colors.red : "inherit"};
+    color: ${props.required ? props.theme.colors.red : 'inherit'};
   `
 );
 
 export const Expanded = styled.div(
-  (props) => css`
+  props => css`
     display: none;
     gap: ${props.theme.size(2)};
     position: absolute;
@@ -41,7 +41,7 @@ export const Expanded = styled.div(
 );
 
 export const Required = styled.div(
-  (props) => css`
+  props => css`
     color: ${props.theme.colors.red};
   `
 );

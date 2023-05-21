@@ -1,4 +1,4 @@
-import { Container, GitHubIcon, Icon, Left, Right, Title } from "./styled";
+import { Container, GitHubIcon, Icon, Left, Right, Title } from './styled';
 
 const Header = (props: HeaderProps) => {
   const { icon, title, ghIcon } = props;

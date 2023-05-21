@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle(
   ({ theme }) => css`
@@ -21,7 +21,7 @@ export default createGlobalStyle(
     }
     html,
     body {
-      font-family: "Roboto", sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: ${theme.colors.current.bg1};
       color: ${theme.colors.current.text1};
     }

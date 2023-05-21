@@ -1,9 +1,7 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-type ContainerProps = { padding?: string; variant: ButtonProps["variant"] };
-
-export const Container = styled.button<ContainerProps>(
-  (props) => css`
+export const Container = styled.button<{ padding?: string; variant: ButtonProps['variant'] }>(
+  props => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +17,7 @@ export const Container = styled.button<ContainerProps>(
     border: none;
     box-shadow: none;
 
-    ${props.variant === "solid" &&
+    ${props.variant === 'solid' &&
     css`
       background-color: ${props.theme.colors.current.mainBg};
       color: ${props.theme.colors.white};
@@ -30,7 +28,7 @@ export const Container = styled.button<ContainerProps>(
       }
     `}
 
-    ${props.variant === "outline" &&
+    ${props.variant === 'outline' &&
     css`
       color: ${props.theme.colors.current.text2};
       border: 1px solid ${props.theme.colors.current.main};
@@ -45,7 +43,7 @@ export const Container = styled.button<ContainerProps>(
 );
 
 export const Label = styled.span(
-  (props) => css`
+  props => css`
     padding: ${props.theme.size(0.5)} ${props.theme.size(2)};
     padding-top: ${props.theme.size(1)};
     font-size: ${props.theme.fontSize.label};
@@ -55,7 +53,7 @@ export const Label = styled.span(
 );
 
 export const Icon = styled.div(
-  (props) => css`
+  props => css`
     display: flex;
     font-size: ${props.theme.size(5)};
   `

@@ -1,12 +1,13 @@
-import HomePage from "./UI/pages/home";
-import GlobalCSS from "./styles/globalCSS";
-import { defaulTheme } from "./styles/theme";
-import reactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import reactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 /// import Router from 'src/UI/router';
-import { ActionProvider } from "src/hooks/useActionDispatch";
-import { GlobalProvider } from "src/hooks/useGlobalContext";
-import { ThemeProvider } from "styled-components";
+import { ActionProvider } from 'src/hooks/useActionDispatch';
+import { GlobalProvider } from 'src/hooks/useGlobalContext';
+import { ThemeProvider } from 'styled-components';
+
+import HomePage from './UI/pages/home';
+import GlobalCSS from './styles/globalCSS';
+import { defaulTheme } from './styles/theme';
 
 const App = () => (
   <GlobalProvider>
@@ -21,4 +22,4 @@ const App = () => (
   </GlobalProvider>
 );
 
-reactDOM.render(<App />, document.getElementById("root"));
+reactDOM.render(<App />, document.getElementById('root'));
