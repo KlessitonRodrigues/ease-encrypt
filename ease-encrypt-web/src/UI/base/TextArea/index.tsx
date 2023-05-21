@@ -1,4 +1,3 @@
-import { handleTextAreaEv } from './services/handleTextArea';
 import { Container, TextAreaInput, TextAreaLabel } from './styled';
 
 const TextArea = (props: TextAreaProps) => {
@@ -10,7 +9,7 @@ const TextArea = (props: TextAreaProps) => {
         <TextAreaInput
           placeholder={placeHolder}
           value={value}
-          onChange={ev => onChange && onChange(handleTextAreaEv(ev))}
+          onChange={ev => onChange && onChange(ev.target.value)}
         />
       </TextAreaLabel>
     </Container>

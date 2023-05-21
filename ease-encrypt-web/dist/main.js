@@ -117,7 +117,7 @@
     color: ${e.colors.current.text1};
     background-color: ${e.colors.current.bg2};
     border-radius: ${e.borderRadius.small};
-  `)),Wt=e=>{const{label:t,placeHolder:n,value:a,onChange:l}=e;return(0,r.jsx)(Bt,{children:(0,r.jsxs)(Vt,{children:[t,(0,r.jsx)(Ht,{placeholder:n,value:a,onChange:e=>l&&l((e=>"insertLineBreak"===e.nativeEvent.inputType?e.target.value+"⚈ ":e.target.value)(e))})]})})},Qt={inputText:"",outputText:"",password:"",encryptType:"base64"},qt=pt.div((({theme:e})=>Ge`
+  `)),Wt=e=>{const{label:t,placeHolder:n,value:a,onChange:l}=e;return(0,r.jsx)(Bt,{children:(0,r.jsxs)(Vt,{children:[t,(0,r.jsx)(Ht,{placeholder:n,value:a,onChange:e=>l&&l(e.target.value)})]})})},Qt={inputText:"",outputText:"",password:"",encryptType:"base64"},qt=pt.div((({theme:e})=>Ge`
     width: 100%;
     max-width: ${e.size(300)};
     margin: ${e.size(6)} auto;
