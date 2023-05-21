@@ -7,7 +7,7 @@ import { Container } from './styled';
 
 const PageContainer = (props: PropsWithChildren) => (
   <Container>
-    <Header icon={<RxLockClosed />} title="Ease Encrypt" ghIcon={<BsGithub />} />
+    <Header icon={<RxLockClosed />} title="Easy Encrypt" ghIcon={<BsGithub />} />
     {props.children}
   </Container>
 );

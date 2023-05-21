@@ -15,8 +15,8 @@ type ButtonProps = {
   label: string;
   iconLeft?: React.ReactElement;
   iconRight?: React.ReactElement;
-  p?: string;
   variant?: 'base' | 'outline' | 'solid';
+  color?: 'main' | 'red' | 'blue' | 'green' | 'yellow';
   onClick?: () => void;
 };
 

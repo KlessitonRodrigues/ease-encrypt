@@ -1,10 +1,10 @@
 import { Container, Icon, Label } from './styled';
 
 const Button = (props: ButtonProps) => {
-  const { label, iconLeft, iconRight, onClick, p, variant } = props;
+  const { label, iconLeft, iconRight, onClick, variant, color } = props;
 
   return (
-    <Container padding={p} variant={variant} onClick={() => onClick && onClick()}>
+    <Container variant={variant} color={color} onClick={() => onClick && onClick()}>
       <Icon>{iconLeft}</Icon>
       <Label>{label}</Label>
       <Icon>{iconRight}</Icon>

@@ -1,60 +1,75 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.button<{ padding?: string; variant: ButtonProps['variant'] }>(
-  props => css`
+export const Container = styled.button<{
+  variant: ButtonProps['variant'];
+  color: ButtonProps['color'];
+}>(
+  ({ theme, variant, color }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: ${props.theme.size(0.5)};
-    min-height: ${props.theme.size(10)};
-    min-width: ${props.theme.size(28)};
-    padding: 0 ${props.theme.size(3)};
-    margin-top: ${props.theme.size(2)};
-    margin-right: ${props.theme.size(4)};
-    border-radius: ${props.theme.borderRadius.small};
-    transition: background-color 0.2s;
+    gap: ${theme.size(0.5)};
+    min-height: ${theme.size(10)};
+    min-width: ${theme.size(28)};
+    padding: 0 ${theme.size(3)};
+    margin-top: ${theme.size(2)};
+    margin-right: ${theme.size(4)};
+    border-radius: ${theme.borderRadius.small};
+    transition: box-shadow 0.2s;
     user-select: none;
     border: none;
     box-shadow: none;
 
-    ${props.variant === 'solid' &&
-    css`
-      background-color: ${props.theme.colors.current.mainBg};
-      color: ${props.theme.colors.white};
-      box-shadow: ${props.theme.shadow.low};
-
-      &:hover {
-        background-color: ${props.theme.colors.current.mainHover};
+    ${() => {
+      switch (variant) {
+        case 'solid':
+          return css`
+            background-color: ${theme.colors.current.mainBg};
+            color: ${theme.colors.white};
+            box-shadow: ${theme.shadow.low};
+            &:hover {
+              box-shadow: ${theme.shadow.medium};
+            }
+          `;
+        case 'outline':
+          return css`
+            color: ${theme.colors.current.text2};
+            border: 1px solid ${theme.colors.gray};
+            background-color: transparent;
+            box-shadow: none;
+            &:hover {
+              box-shadow: ${theme.shadow.low};
+            }
+          `;
       }
-    `}
+    }}
 
-    ${props.variant === 'outline' &&
-    css`
-      color: ${props.theme.colors.current.text2};
-      border: 1px solid ${props.theme.colors.current.main};
-      background-color: transparent;
-      box-shadow: none;
-
-      &:hover {
-        background-color: ${props.theme.colors.current.bg2};
+    ${() => {
+      switch (color) {
+        case 'red':
+          return `background-color: ${theme.colors.red};`;
+        case 'yellow':
+          return `background-color: ${theme.colors.yellow};`;
+        case 'green':
+          return `background-color: ${theme.colors.green};`;
       }
-    `}
+    }}
   `
 );
 
 export const Label = styled.span(
-  props => css`
-    padding: ${props.theme.size(0.5)} ${props.theme.size(2)};
-    padding-top: ${props.theme.size(1)};
-    font-size: ${props.theme.fontSize.label};
+  ({ theme }) => css`
+    padding: ${theme.size(0.5)} ${theme.size(2)};
+    padding-top: ${theme.size(1)};
+    font-size: ${theme.fontSize.label};
     font-weight: bold;
     font-family: monospace;
   `
 );
 
 export const Icon = styled.div(
-  props => css`
+  ({ theme }) => css`
     display: flex;
-    font-size: ${props.theme.size(5)};
+    font-size: ${theme.size(5)};
   `
 );
