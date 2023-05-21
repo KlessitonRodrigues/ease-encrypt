@@ -16,7 +16,7 @@ type ButtonProps = {
   iconLeft?: React.ReactElement;
   iconRight?: React.ReactElement;
   p?: string;
-  variant?: "base" | "outline" | "solid";
+  variant?: 'base' | 'outline' | 'solid';
   onClick?: () => void;
 };
 
@@ -33,7 +33,7 @@ type InputProps = {
 type InfoTagProps = {
   required?: boolean;
   description?: string;
-  expandTo?: "top" | "right";
+  expandTo?: 'top' | 'right';
 };
 
 type IfProps = {
