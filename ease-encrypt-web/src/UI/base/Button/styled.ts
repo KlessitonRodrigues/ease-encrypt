@@ -20,6 +20,9 @@ export const Container = styled.button<{
     border: none;
     box-shadow: none;
 
+    &:hover {
+    }
+
     ${() => {
       switch (variant) {
         case 'solid':
