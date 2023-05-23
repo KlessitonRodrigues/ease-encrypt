@@ -17,6 +17,15 @@ export const TextAreaLabel = styled.label(
   `
 );
 
+export const Row = styled.label(
+  ({ theme }) => css`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: ${theme.size(2)};
+  `
+);
+
 export const TextAreaInput = styled.textarea(
   ({ theme }) => css`
     font-family: unset;

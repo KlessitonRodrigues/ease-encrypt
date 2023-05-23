@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.button<{
-  variant: ButtonProps['variant'];
-  color: ButtonProps['color'];
+  variant?: ButtonProps['variant'];
+  color?: ButtonProps['color'];
+  disabled?: boolean;
 }>(
-  ({ theme, variant, color }) => css`
+  ({ theme, variant, color, disabled }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -15,12 +16,13 @@ export const Container = styled.button<{
     margin-top: ${theme.size(2)};
     margin-right: ${theme.size(4)};
     border-radius: ${theme.borderRadius.small};
-    transition: box-shadow 0.2s;
+    transition: opacity 0.1s;
     user-select: none;
     border: none;
     box-shadow: none;
 
     &:hover {
+      opacity: 0.75;
     }
 
     ${() => {
@@ -30,19 +32,12 @@ export const Container = styled.button<{
             background-color: ${theme.colors.current.mainBg};
             color: ${theme.colors.white};
             box-shadow: ${theme.shadow.low};
-            &:hover {
-              box-shadow: ${theme.shadow.medium};
-            }
           `;
         case 'outline':
           return css`
             color: ${theme.colors.current.text2};
             border: 1px solid ${theme.colors.gray};
             background-color: transparent;
-            box-shadow: none;
-            &:hover {
-              box-shadow: ${theme.shadow.low};
-            }
           `;
       }
     }}
@@ -57,6 +52,8 @@ export const Container = styled.button<{
           return `background-color: ${theme.colors.green};`;
       }
     }}
+
+    ${disabled && `filter: grayscale(1); cursor: not-allowed; opacity: 0.6;`}
   `
 );
 

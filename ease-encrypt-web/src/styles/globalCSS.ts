@@ -22,7 +22,7 @@ export default createGlobalStyle(
     html,
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: ${theme.colors.current.bg1};
+      background-color: ${theme.colors.current.bg3};
       color: ${theme.colors.current.text1};
     }
     h1 {

@@ -9,7 +9,7 @@ type TextAreaProps = {
   placeHolder?: string;
   value?: string;
   onChange?: (value: string) => void;
-};
+} & InfoTagProps;
 
 type ButtonProps = {
   label: string;
@@ -18,6 +18,7 @@ type ButtonProps = {
   variant?: 'base' | 'outline' | 'solid';
   color?: 'main' | 'red' | 'blue' | 'green' | 'yellow';
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 type InputProps = {

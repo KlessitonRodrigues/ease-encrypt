@@ -18,13 +18,13 @@ const EncryptPanel = () => {
           label="Text Process"
           value={form.inputText}
           onChange={inputText => setform({ ...form, inputText })}
+          required
         />
       </InputText>
 
       <InputPasss>
         <Input
           label="Password"
-          description="Remind to copy te password"
           value={form.password}
           onChange={password => setform({ ...form, password })}
         />
@@ -33,6 +33,7 @@ const EncryptPanel = () => {
           iconLeft={<RxLockClosed />}
           label="Encrypt"
           onClick={() => setform(onEncrypt(form))}
+          disabled={!form.inputText}
         />
         <Button
           variant="solid"
@@ -40,6 +41,7 @@ const EncryptPanel = () => {
           iconLeft={<RxLockOpen2 />}
           label="Decrypt"
           onClick={() => setform(onDecrypt(form))}
+          disabled={!form.inputText}
         />
         <Button
           variant="outline"
