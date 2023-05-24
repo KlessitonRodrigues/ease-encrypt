@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "expo-project",
+    "slug": "expo-project",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/UI/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/UI/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/UI/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./src/UI/assets/favicon.png"
+    }
+  }
+}

@@ -20,7 +20,7 @@ export const solarizedBackground: Partial<Theme['colors']['current']> = {
 };
 
 export const defaulTheme: Theme = {
-  size: (n: number) => `${n * 0.2}rem`,
+  size: (n: number) => `${n * 2}px`,
   colors: {
     current: {
       bg1: materialColors.grey['50'],
