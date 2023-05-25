@@ -15,15 +15,3 @@ export const Label = styled.Text(
     text-transform: capitalize;
   `
 );
-
-export const InputField = styled.TextInput(
-  ({ theme }) => css`
-    width: 100%;
-    padding: ${theme.size(4)};
-    margin-top: ${theme.size(2)};
-    font-size: ${theme.fontSize.body};
-    color: ${theme.colors.text1};
-    background-color: ${theme.colors.bg2};
-    border-radius: ${theme.size(4)};
-  `
-);

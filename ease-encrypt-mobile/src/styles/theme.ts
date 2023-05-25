@@ -1,7 +1,7 @@
 import { atlassianColors, materialColors } from './lib/palettes';
 import screenSizes from './lib/screenSizes';
 
-export const darkBackground: Partial<Theme['colors']['current']> = {
+export const darkBackground: Partial<Theme['colors']> = {
   bg1: materialColors.black,
   bg2: materialColors.grey['800'] + '44',
   bg3: materialColors.grey['700'] + '44',
@@ -10,7 +10,7 @@ export const darkBackground: Partial<Theme['colors']['current']> = {
   text3: materialColors.grey['500'],
 };
 
-export const solarizedBackground: Partial<Theme['colors']['current']> = {
+export const solarizedBackground: Partial<Theme['colors']> = {
   bg1: '#FCD7B1',
   bg2: materialColors.grey['400'] + '44',
   bg3: materialColors.grey['600'] + '44',
@@ -22,17 +22,14 @@ export const solarizedBackground: Partial<Theme['colors']['current']> = {
 export const defaulTheme: Theme = {
   size: (n: number) => `${n * 2}px`,
   colors: {
-    current: {
-      bg1: materialColors.grey['50'],
-      bg2: materialColors.grey['100'],
-      bg3: materialColors.grey['200'],
-      text1: materialColors.grey['800'],
-      text2: materialColors.grey['700'],
-      text3: materialColors.grey['600'],
-      main: atlassianColors.blue['600'],
-      mainHover: atlassianColors.blue['800'],
-      mainBg: atlassianColors.blue['700'],
-    },
+    main: atlassianColors.blue['600'],
+    mainBg: atlassianColors.blue['700'],
+    bg1: materialColors.grey['50'],
+    bg2: materialColors.grey['100'],
+    bg3: materialColors.grey['200'],
+    text1: materialColors.grey['800'],
+    text2: materialColors.grey['700'],
+    text3: materialColors.grey['600'],
     gray: materialColors.grey['700'],
     yellow: atlassianColors.yellow['700'],
     red: atlassianColors.red['800'],
@@ -61,16 +58,16 @@ export const defaulTheme: Theme = {
     full: '50%',
   },
   fontSize: {
-    body: '1rem',
-    small: '0.95rem',
-    verySmall: '0.85rem',
-    label: '0.9rem',
-    h1: '1.6rem',
-    h2: '1.4rem',
-    h3: '1.2rem',
-    h4: '1.1rem',
-    h5: '1.075rem',
-    h6: '1.05rem',
+    body: '16px',
+    label: '14px',
+    small: '13px',
+    verySmall: '12px',
+    h1: '24px',
+    h2: '22px',
+    h3: '20px',
+    h4: '19px',
+    h5: '18px',
+    h6: '17px',
   },
   devices: {
     mobileS: `(max-width: ${screenSizes.mobileS}px)`,

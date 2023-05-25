@@ -1,16 +1,10 @@
-import { Text } from 'react-native';
-
-import Input from '../../base/Input';
+import EncryptPanel from '../../components/EncryptPanel';
 import PageContainer from '../../components/PageContainer';
 
 const HomePage = () => {
   return (
     <PageContainer>
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
+      <EncryptPanel />
     </PageContainer>
   );
 };
