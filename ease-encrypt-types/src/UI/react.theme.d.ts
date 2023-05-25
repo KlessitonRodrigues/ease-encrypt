@@ -1,17 +1,14 @@
 type Theme = {
   size: (n: number) => string;
   colors: {
-    current: {
-      bg1: string;
-      bg2: string;
-      bg3: string;
-      text1: string;
-      text2: string;
-      text3: string;
-      main: string;
-      mainHover: string;
-      mainBg: string;
-    };
+    main: string;
+    mainBg: string;
+    bg1: string;
+    bg2: string;
+    bg3: string;
+    text1: string;
+    text2: string;
+    text3: string;
     gray: string;
     yellow: string;
     red: string;

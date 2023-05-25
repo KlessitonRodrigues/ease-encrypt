@@ -24,7 +24,7 @@ type ButtonProps = {
 type InputProps = {
   label?: string;
   type?: string;
-  value?: string | number;
+  value?: string;
   placeHolder?: string;
   required?: boolean;
   description?: string;
