@@ -14,5 +14,6 @@ export const Row = styled.View(
     display: flex;
     flex-direction: row;
     gap: ${theme.size(4)};
+    margin-bottom: ${theme.size(2)};
   `
 );

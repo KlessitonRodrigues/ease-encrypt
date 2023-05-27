@@ -1,8 +1,10 @@
 import IonIcons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
+import Button from 'src/UI/base/Button';
+import { Icons } from 'src/UI/base/Icons';
+import Input from 'src/UI/base/Input';
 
-import Button from '../../base/Button';
-import Input from '../../base/Input';
+import { copyToClipboard } from './services/copyText';
 import { initialData, onDecrypt, onEncrypt } from './services/encrypt';
 import { Container, Row } from './styled';
 
@@ -16,28 +18,30 @@ const EncryptPanel = () => {
 
       <Row>
         <Button
-          iconLeft={<IonIcons name="lock-closed-outline" color="white" size={20} />}
+          iconLeft={<Icons type="lock" />}
           label="Encrypt"
           onClick={() => setForm(onEncrypt(form))}
         />
         <Button
-          iconLeft={<IonIcons name="lock-open-outline" color="white" size={20} />}
+          iconLeft={<Icons type="lock-open" />}
           label="Decrypt"
           color="yellow"
           onClick={() => setForm(onDecrypt(form))}
         />
         <Button
-          iconLeft={<IonIcons name="copy-outline" color="gray" size={20} />}
+          iconLeft={<Icons type="copy" color="gray" />}
           label="Copy"
           color="transparent"
+          onClick={() => copyToClipboard(form.password)}
         />
       </Row>
 
-      <Input label="Result Text" value={form.outputText} />
+      <Input type="textArea" label="Result Text" value={form.outputText} readonly />
       <Button
-        iconLeft={<IonIcons name="copy-outline" color="gray" size={20} />}
+        iconLeft={<Icons type="copy" color="gray" />}
         label="Copy"
         color="transparent"
+        onClick={() => copyToClipboard(form.outputText)}
       />
     </Container>
   );

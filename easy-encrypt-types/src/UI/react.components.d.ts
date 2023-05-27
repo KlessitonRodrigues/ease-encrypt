@@ -12,7 +12,7 @@ type TextAreaProps = {
 } & InfoTagProps;
 
 type ButtonProps = {
-  label: string;
+  label?: string;
   iconLeft?: React.ReactElement;
   iconRight?: React.ReactElement;
   variant?: 'base' | 'outline' | 'solid';
@@ -23,10 +23,11 @@ type ButtonProps = {
 
 type InputProps = {
   label?: string;
-  type?: string;
+  type?: 'time' | 'date' | 'textArea';
   value?: string;
   placeHolder?: string;
   required?: boolean;
+  readonly?: boolean;
   description?: string;
   onChange?: (value: string) => void;
 };
@@ -42,4 +43,10 @@ type IfProps = {
   true?: React.ReactElement;
   false?: React.ReactElement;
   children?: React.ReactElement;
+};
+
+type IconsProps = {
+  type: 'lock' | 'lock-fill' | 'lock-open' | 'copy';
+  color?: string;
+  size?: number;
 };

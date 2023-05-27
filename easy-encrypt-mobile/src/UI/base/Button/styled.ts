@@ -1,5 +1,4 @@
-import { css } from 'styled-components';
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }>(
   ({ theme, color }) => css`
@@ -10,9 +9,9 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
     align-self: flex-start;
     gap: ${theme.size(2)};
     height: ${theme.size(20)};
-    min-width: ${theme.size(60)};
+    min-width: ${theme.size(40)};
     margin: ${theme.size(4)} 0;
-    padding: ${theme.size(4)} ${theme.size(6)};
+    padding: ${theme.size(4)} ${theme.size(4)};
     background-color: ${theme.colors.mainBg};
     border-radius: ${theme.borderRadius.medium};
 
