@@ -17,7 +17,7 @@
     "react": "18.2.0",
     "react-native": "0.71.8",
     "styled-components": "5.3.6",
-    "easy-encrypt-client": "file:./../easy-encrypt-client"
+    "easy-encrypt-client": "1.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.21.0",
@@ -27,8 +27,8 @@
   "private": true,
   "workspaces": {
     "nohoist": [
-      "expo",
-      "@expo/vector-icons"
+      "@expo/vector-icons",
+      "expo"
     ]
   }
 }

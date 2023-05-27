@@ -7,7 +7,8 @@
     "test": "jest",
     "test-w": "jest --watch",
     "test-cover": "jest --coverage",
-    "build": "webpack"
+    "build": "webpack",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "crypto-js": "3.1.9-1",

@@ -21,7 +21,7 @@
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
     "@types/styled-components": "5.1.26",
-    "easy-encrypt-client": "file:./../easy-encrypt-client",
+    "easy-encrypt-client": "*",
     "html-webpack-plugin": "5.5.0",
     "http-server": "14.1.1",
     "prettier": "2.7.0",
