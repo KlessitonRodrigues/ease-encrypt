@@ -3,6 +3,7 @@ node_modules/
 .expo/
 dist/
 web-build/
+coverage/
 
 # files
 npm-debug.*
@@ -13,6 +14,8 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
+*.apk
+*.aab
 
 # macOS
 .DS_Store
