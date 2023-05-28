@@ -9,7 +9,6 @@
   "workspaces": [
     "easy-encrypt-client",
     "easy-encrypt-mobile",
-    "easy-encrypt-types",
     "easy-encrypt-web"
   ]
 }
