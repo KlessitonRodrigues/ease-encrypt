@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Easy Encrypt",
+    "slug": "expo-project",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/UI/assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/UI/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/UI/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.klessiton.easyencrypt"
+    },
+    "web": {
+      "favicon": "./src/UI/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6ee933d7-c35d-41d6-a973-0effe78d6c6a"
+      }
+    }
+  }
+}

@@ -7,8 +7,9 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "ease-encrypt-types",
-    "ease-encrypt-client",
-    "ease-encrypt-web"
+    "easy-encrypt-client",
+    "easy-encrypt-mobile",
+    "easy-encrypt-types",
+    "easy-encrypt-web"
   ]
 }
