@@ -3,14 +3,14 @@
     "version": ">= 3.13.2"
   },
   "build": {
-    "development": {
+    "dev": {
       "distribution": "internal",
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease"
       }
     },
-    "development-playstore": {
+    "dev-store": {
       "distribution": "internal",
       "developmentClient": true
     },

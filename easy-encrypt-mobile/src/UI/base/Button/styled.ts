@@ -11,7 +11,7 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
     height: ${theme.size(20)};
     min-width: ${theme.size(40)};
     margin: ${theme.size(4)} 0;
-    padding: ${theme.size(4)} ${theme.size(4)};
+    padding: 0 ${theme.size(4)};
     background-color: ${theme.colors.mainBg};
     border-radius: ${theme.borderRadius.medium};
 
@@ -27,7 +27,7 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
           return css`
             background-color: transparent;
             border-width: 1.5px;
-            border-color: ${theme.colors.text3};
+            border-color: ${theme.colors.gray};
           `;
       }
     }}

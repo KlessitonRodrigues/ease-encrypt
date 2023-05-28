@@ -20,6 +20,7 @@ const EncryptPanel = () => {
         <Button
           iconLeft={<Icons type="lock" />}
           label="Encrypt"
+          color="green"
           onClick={() => setForm(onEncrypt(form))}
         />
         <Button

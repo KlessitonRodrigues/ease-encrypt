@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components/native';
 export const Container = styled.View(
   ({ theme }) => css`
     width: 100%;
-    padding: ${theme.size(10)} ${theme.size(4)};
+    padding: ${theme.size(8)} ${theme.size(4)};
     padding-top: ${theme.size(25)};
     background-color: ${theme.colors.mainBg};
   `

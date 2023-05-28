@@ -1,37 +1,19 @@
 import { atlassianColors, materialColors } from './lib/palettes';
 import screenSizes from './lib/screenSizes';
 
-export const darkBackground: Partial<Theme['colors']> = {
-  bg1: materialColors.black,
-  bg2: materialColors.grey['800'] + '44',
-  bg3: materialColors.grey['700'] + '44',
-  text1: materialColors.grey['300'],
-  text2: materialColors.grey['400'],
-  text3: materialColors.grey['500'],
-};
-
-export const solarizedBackground: Partial<Theme['colors']> = {
-  bg1: '#FCD7B1',
-  bg2: materialColors.grey['400'] + '44',
-  bg3: materialColors.grey['600'] + '44',
-  text1: materialColors.grey['900'],
-  text2: materialColors.grey['800'],
-  text3: materialColors.grey['700'],
-};
-
-export const defaulTheme: Theme = {
+export const defaultTheme: Theme = {
   size: (n: number) => `${n * 2}px`,
   colors: {
     main: atlassianColors.blue['600'],
-    mainBg: atlassianColors.blue['700'],
+    mainBg: atlassianColors.blue['800'],
     bg1: materialColors.grey['50'],
     bg2: materialColors.grey['100'],
     bg3: materialColors.grey['200'],
     text1: materialColors.grey['800'],
     text2: materialColors.grey['700'],
     text3: materialColors.grey['600'],
-    gray: materialColors.grey['700'],
-    yellow: atlassianColors.yellow['700'],
+    gray: materialColors.grey['600'],
+    yellow: atlassianColors.yellow['600'],
     red: atlassianColors.red['800'],
     green: materialColors.lightGreen['800'],
     white: materialColors.white,
@@ -80,5 +62,18 @@ export const defaulTheme: Theme = {
     desktopS: `(max-width: ${screenSizes.desktopS}px)`,
     desktopM: `(max-width: ${screenSizes.desktopM}px)`,
     desktopL: `(max-width: ${screenSizes.desktopL}px)`,
+  },
+};
+
+export const defaultThemeDark = {
+  ...defaultTheme,
+  colors: {
+    ...defaultTheme.colors,
+    bg1: materialColors.black,
+    bg2: materialColors.grey['800'] + '44',
+    bg3: materialColors.grey['700'] + '44',
+    text1: materialColors.grey['300'],
+    text2: materialColors.grey['400'],
+    text3: materialColors.grey['500'],
   },
 };
