@@ -7,7 +7,7 @@ export const Container = styled.div(
     max-width: ${theme.size(450)};
     margin: auto;
     overflow-y: auto;
-    background-color: ${theme.colors.current.bg1};
+    background-color: ${theme.colors.bg1};
   `
 );
 

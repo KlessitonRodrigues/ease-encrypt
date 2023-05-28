@@ -36,9 +36,9 @@ export const TextAreaInput = styled.textarea(
     height: ${theme.size(25)};
     min-height: ${theme.size(25)};
     max-height: ${theme.size(120)};
-    border: ${theme.bordertype.large};
-    color: ${theme.colors.current.text1};
-    background-color: ${theme.colors.current.bg2};
-    border-radius: ${theme.borderRadius.small};
+    border: 2px solid ${theme.colors.text3 + '44'};
+    color: ${theme.colors.text1};
+    background-color: ${theme.colors.bg2};
+    border-radius: ${theme.radius.small};
   `
 );

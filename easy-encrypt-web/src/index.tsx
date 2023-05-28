@@ -7,13 +7,13 @@ import { ThemeProvider } from 'styled-components';
 
 import HomePage from './UI/pages/home';
 import GlobalCSS from './styles/globalCSS';
-import { defaulTheme } from './styles/theme';
+import { defaultTheme } from './styles/theme';
 
 const App = () => (
   <GlobalProvider>
     <ActionProvider>
       <BrowserRouter>
-        <ThemeProvider theme={defaulTheme}>
+        <ThemeProvider theme={defaultTheme}>
           <GlobalCSS />
           <HomePage />
         </ThemeProvider>

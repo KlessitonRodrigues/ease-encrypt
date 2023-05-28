@@ -5,7 +5,7 @@ export const defaultTheme: Theme = {
   size: (n: number) => `${n * 2}px`,
   colors: {
     main: atlassianColors.blue['600'],
-    mainBg: atlassianColors.blue['800'],
+    mainBg: atlassianColors.blue['700'],
     bg1: materialColors.grey['50'],
     bg2: materialColors.grey['100'],
     bg3: materialColors.grey['200'],
@@ -19,26 +19,6 @@ export const defaultTheme: Theme = {
     white: materialColors.white,
     black: materialColors.black,
   },
-  shadow: {
-    low: '1px 1px 4px 0px #0004',
-    medium: '1px 1px 4px 1px #0005',
-    high: '1px 1px 4px 1px #0007',
-    mediumGray: '1px 1px 4px 1px #777a',
-    lowRight: '3px 0 4px 0px #0002',
-    mediumLeft: '-4px 0 4px 0px #0006',
-  },
-  bordertype: {
-    small: 'none',
-    medium: '1px solid #aaa3',
-    large: '2px solid #aaa3',
-  },
-  borderRadius: {
-    verySmall: '2px',
-    small: '4px',
-    medium: '6px',
-    large: '8px',
-    full: '50%',
-  },
   fontSize: {
     h1: '24px',
     h2: '22px',
@@ -50,6 +30,21 @@ export const defaultTheme: Theme = {
     label: '14px',
     small: '15px',
     verySmall: '13px',
+  },
+  borderRadius: {
+    verySmall: '2px',
+    small: '4px',
+    medium: '6px',
+    large: '8px',
+    full: '50%',
+  },
+  shadow: {
+    low: '1px 1px 4px 0px #0004',
+    medium: '1px 1px 4px 1px #0005',
+    high: '1px 1px 4px 1px #0007',
+    mediumGray: '1px 1px 4px 1px #777a',
+    lowRight: '3px 0 4px 0px #0002',
+    mediumLeft: '-4px 0 4px 0px #0006',
   },
   devices: {
     mobileS: `(max-width: ${screenSizes.mobileS}px)`,

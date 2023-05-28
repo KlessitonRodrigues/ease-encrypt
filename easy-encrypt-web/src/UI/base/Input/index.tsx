@@ -1,18 +1,11 @@
-import If from '../If';
-import InfoTag from '../InfoTag';
 import { Container, InputField, Label } from './styled';
 
 const Input = (props: InputProps) => {
-  const { label, placeHolder, type, value, required, description, onChange } = props;
+  const { label, placeHolder, type, value, onChange } = props;
 
   return (
     <Container>
-      <Label>
-        {label}
-        <If check={required || !!description}>
-          <InfoTag {...props} />
-        </If>
-      </Label>
+      <Label>{label}</Label>
       <InputField
         type={type}
         value={value}

@@ -15,7 +15,7 @@ export const Container = styled.button<{
     padding: 0 ${theme.size(3)};
     margin-top: ${theme.size(2)};
     margin-right: ${theme.size(4)};
-    border-radius: ${theme.borderRadius.small};
+    border-radius: ${theme.radius.small};
     transition: opacity 0.1s;
     user-select: none;
     border: none;
@@ -29,13 +29,13 @@ export const Container = styled.button<{
       switch (variant) {
         case 'solid':
           return css`
-            background-color: ${theme.colors.current.mainBg};
+            background-color: ${theme.colors.mainBg};
             color: ${theme.colors.white};
             box-shadow: ${theme.shadow.low};
           `;
         case 'outline':
           return css`
-            color: ${theme.colors.current.text2};
+            color: ${theme.colors.text2};
             border: 1px solid ${theme.colors.gray};
             background-color: transparent;
           `;

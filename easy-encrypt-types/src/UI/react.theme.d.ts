@@ -24,12 +24,7 @@ type Theme = {
     mediumLeft: string;
     lowRight: string;
   };
-  bordertype: {
-    small: string;
-    medium: string;
-    large: string;
-  };
-  borderRadius: {
+  radius: {
     verySmall: string;
     small: string;
     medium: string;

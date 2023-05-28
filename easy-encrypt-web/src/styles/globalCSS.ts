@@ -22,8 +22,8 @@ export default createGlobalStyle(
     html,
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: ${theme.colors.current.bg3};
-      color: ${theme.colors.current.text1};
+      background-color: ${theme.colors.bg3};
+      color: ${theme.colors.text1};
     }
     h1 {
       font-size: ${theme.fontSize.h1};
@@ -66,7 +66,7 @@ export default createGlobalStyle(
       border-radius: 2px;
     }
     div::-webkit-scrollbar-thumb:hover {
-      background: ${theme.colors.current.main};
+      background: ${theme.colors.main};
     }
     #root {
       width: 100%;

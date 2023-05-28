@@ -27,7 +27,7 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
           return css`
             background-color: transparent;
             border-width: 1.5px;
-            border-color: ${theme.colors.gray};
+            border-color: ${theme.colors.text3};
           `;
       }
     }}
@@ -39,6 +39,7 @@ export const Icon = styled.View(() => css``);
 export const Label = styled.Text<{ color: ButtonProps['color'] }>(
   ({ theme, color }) => css`
     padding-right: ${theme.size(2)};
+    padding-bottom: ${theme.size(1)};
     text-transform: capitalize;
     font-family: monospace;
     font-weight: bold;

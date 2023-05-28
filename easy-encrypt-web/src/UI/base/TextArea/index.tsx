@@ -1,17 +1,12 @@
-import If from '../If';
-import InfoTag from '../InfoTag';
 import { Container, Row, TextAreaInput, TextAreaLabel } from './styled';
 
 const TextArea = (props: TextAreaProps) => {
-  const { label, placeHolder, value, onChange, description, required } = props;
+  const { label, placeHolder, value, onChange } = props;
 
   return (
     <Container>
       <TextAreaLabel>
-        <Row>
-          {label}
-          {(description || required) && <InfoTag {...props} />}
-        </Row>
+        <Row>{label}</Row>
         <TextAreaInput
           placeholder={placeHolder}
           value={value}
