@@ -6,7 +6,7 @@ export const defaultTheme: Theme = {
   colors: {
     bg1: materialColors.grey['50'],
     bg2: materialColors.grey['100'],
-    bg3: materialColors.grey['200'],
+    bg3: materialColors.grey['300'],
     text1: materialColors.grey['800'],
     text2: materialColors.grey['700'],
     text3: materialColors.grey['600'],
@@ -32,9 +32,9 @@ export const defaultTheme: Theme = {
     h6: '1.05rem',
   },
   shadow: {
-    low: '1px 1px 4px 0px #0004',
-    medium: '1px 1px 4px 1px #0005',
-    high: '1px 1px 4px 1px #0007',
+    low: '1px 1px 2px 0 #0005',
+    medium: '1px 1px 2px 0 #0009',
+    high: '1px 2px 2px 0 #000C',
     mediumGray: '1px 1px 4px 1px #777a',
     lowRight: '3px 0 4px 0px #0002',
     mediumLeft: '-4px 0 4px 0px #0006',

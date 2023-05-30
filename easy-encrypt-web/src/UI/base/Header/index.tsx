@@ -1,7 +1,7 @@
-import { Container, GitHubIcon, Icon, Left, Right, Title } from './styled';
+import { Container, GitHub, Icon, Left, Right, Title } from './styled';
 
 const Header = (props: HeaderProps) => {
-  const { icon, title, ghIcon } = props;
+  const { icon, title, ghIcon, ghLink } = props;
 
   return (
     <Container>
@@ -10,7 +10,9 @@ const Header = (props: HeaderProps) => {
         <Title>{title}</Title>
       </Left>
       <Right>
-        <GitHubIcon>{ghIcon}</GitHubIcon>
+        <GitHub href={ghLink} target="_blank">
+          {ghIcon}
+        </GitHub>
       </Right>
     </Container>
   );

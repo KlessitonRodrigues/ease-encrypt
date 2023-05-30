@@ -2,6 +2,7 @@ type HeaderProps = {
   icon: React.ReactElement;
   title: string;
   ghIcon: React.ReactElement;
+  ghLink: string;
 };
 
 type TextAreaProps = {
@@ -9,7 +10,7 @@ type TextAreaProps = {
   placeHolder?: string;
   value?: string;
   onChange?: (value: string) => void;
-} & InfoTagProps;
+};
 
 type ButtonProps = {
   label?: string;

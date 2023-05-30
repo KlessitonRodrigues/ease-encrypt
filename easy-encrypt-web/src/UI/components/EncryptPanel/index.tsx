@@ -15,10 +15,9 @@ const EncryptPanel = () => {
     <Container>
       <InputText>
         <TextArea
-          label="Text Process"
+          label="Text"
           value={form.inputText}
           onChange={inputText => setform({ ...form, inputText })}
-          required
         />
       </InputText>
 
