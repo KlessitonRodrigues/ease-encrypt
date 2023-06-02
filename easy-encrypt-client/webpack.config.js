@@ -1,4 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
+require('dotenv').config({ path: '../.env' });
+
+const compileEnv = new webpack.EnvironmentPlugin(['CLIENT_PRIVATE_KEY']);
 
 module.exports = {
   mode: 'production',
@@ -16,4 +20,5 @@ module.exports = {
     extensions: ['.ts', '.js', '...'],
     plugins: [],
   },
+  plugins: [compileEnv],
 };

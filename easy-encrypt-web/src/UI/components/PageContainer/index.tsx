@@ -1,5 +1,4 @@
 import { PropsWithChildren } from 'react';
-import { BsGithub } from 'react-icons/bs';
 import { RxGithubLogo, RxLockClosed } from 'react-icons/rx';
 import Header from 'src/UI/base/Header';
 

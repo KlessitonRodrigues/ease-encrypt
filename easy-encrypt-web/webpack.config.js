@@ -23,7 +23,6 @@ const config = {
       scriptLoading: 'defer',
       template: 'index.html',
     }),
-
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
@@ -42,6 +41,12 @@ const config = {
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
+  },
+  optimization: {
+    splitChunks: {
+      // include all types of chunks
+      // chunks: 'all',
+    },
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],

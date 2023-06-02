@@ -51,3 +51,10 @@ type IconsProps = {
   color?: string;
   size?: number;
 };
+
+type CheckOptionProps = {
+  checked?: boolean;
+  onChange?: (checked: boolean) => void;
+  title?: string;
+  description?: string | string[];
+};

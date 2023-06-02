@@ -31,7 +31,7 @@ export const defaultTheme: Theme = {
     small: '15px',
     verySmall: '13px',
   },
-  borderRadius: {
+  radius: {
     verySmall: '2px',
     small: '4px',
     medium: '6px',

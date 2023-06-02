@@ -3,7 +3,7 @@ import { textEncrypt } from './text/encrypt';
 
 export const controllers = () => ({
   text: {
-    ecrypt: textEncrypt,
+    encrypt: textEncrypt,
     decrypt: textDecrypt,
   },
 });

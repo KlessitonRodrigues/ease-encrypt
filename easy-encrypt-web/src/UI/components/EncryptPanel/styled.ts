@@ -15,7 +15,7 @@ export const InputText = styled.div(
   `
 );
 
-export const InputPasss = styled.div(
+export const InputPassword = styled.div(
   ({ theme }) => css`
     margin-bottom: ${theme.size(6)};
   `
@@ -24,5 +24,17 @@ export const InputPasss = styled.div(
 export const ResultText = styled.div(
   ({ theme }) => css`
     margin-bottom: ${theme.size(6)};
+  `
+);
+
+export const Options = styled.div(
+  () => css`
+    display: flex;
+  `
+);
+
+export const OptionsTitle = styled.div(
+  ({ theme }) => css`
+    font-size: ${theme.fontSize.label};
   `
 );

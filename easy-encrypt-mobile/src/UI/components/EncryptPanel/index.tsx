@@ -29,12 +29,6 @@ const EncryptPanel = () => {
           color="yellow"
           onClick={() => setForm(onDecrypt(form))}
         />
-        <Button
-          iconLeft={<Icons type="copy" color="gray" />}
-          label="Copy"
-          color="transparent"
-          onClick={() => copyToClipboard(form.password)}
-        />
       </Row>
 
       <Input type="textArea" label="Result Text" value={form.outputText} readonly />

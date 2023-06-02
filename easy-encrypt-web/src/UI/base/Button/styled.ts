@@ -22,10 +22,6 @@ export const Container = styled.button<{
     border: none;
     box-shadow: none;
 
-    &:hover {
-      opacity: 0.75;
-    }
-
     ${() => {
       switch (variant) {
         case 'solid':
@@ -55,7 +51,11 @@ export const Container = styled.button<{
       }
     }}
 
-    ${disabled && `filter: grayscale(1); cursor: not-allowed; opacity: 0.6;`}
+    &:hover {
+      opacity: 0.8;
+    }
+
+    ${disabled && `cursor: not-allowed; filter: grayscale(1);`}
   `
 );
 
