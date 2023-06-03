@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: './client.env' });
 
 const compileEnv = new webpack.EnvironmentPlugin(['CLIENT_PRIVATE_KEY']);
 

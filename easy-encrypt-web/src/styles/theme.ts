@@ -33,7 +33,7 @@ export const defaultTheme: Theme = {
   },
   shadow: {
     low: '1px 1px 2px 0 #0004',
-    medium: '1px 1px 2px 0 #0006',
+    medium: '1px 1px 2px 0 #0009',
     high: '1px 2px 2px 0 #0007',
     mediumGray: '1px 1px 4px 1px #777a',
     lowRight: '3px 0 4px 0px #0002',

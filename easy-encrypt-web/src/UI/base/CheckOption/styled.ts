@@ -14,15 +14,16 @@ export const Container = styled.div<{ checked: boolean }>(
     cursor: pointer;
     box-shadow: ${theme.shadow.low};
     background-color: ${theme.colors.bg3};
-    transition: 0.3s border-color;
-    ${checked &&
-    css`
-      background-color: ${theme.colors.bg1};
-      border-color: ${theme.colors.main};
-    `}
+    transition: 0.3s;
+
+    ${checked && `background-color: ${theme.colors.bg1}; border-color: ${theme.colors.main}`};
+
+    ${Title} {
+      ${checked && `color: ${theme.colors.main}`};
+    }
 
     :hover {
-      border-color: ${theme.colors.main};
+      box-shadow: ${theme.shadow.medium};
     }
   `
 );
@@ -49,7 +50,7 @@ export const Text = styled.div(
 export const Title = styled.div(
   ({ theme }) => css`
     margin-bottom: ${theme.size(1)};
-    color: ${theme.colors.mainBg};
+    color: ${theme.colors.text2};
     font-weight: bold;
   `
 );

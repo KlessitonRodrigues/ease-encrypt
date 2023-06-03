@@ -13,7 +13,7 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
     margin: ${theme.size(4)} 0;
     padding: 0 ${theme.size(4)};
     background-color: ${theme.colors.mainBg};
-    border-radius: ${theme.borderRadius.medium};
+    border-radius: ${theme.radius.medium};
 
     ${() => {
       switch (color) {
@@ -39,12 +39,12 @@ export const Icon = styled.View(() => css``);
 export const Label = styled.Text<{ color: ButtonProps['color'] }>(
   ({ theme, color }) => css`
     padding-right: ${theme.size(2)};
-    padding-bottom: ${theme.size(1)};
+    padding-bottom: ${theme.size(0)};
     text-transform: capitalize;
     font-family: monospace;
     font-weight: bold;
     text-align: center;
-    font-size: ${theme.fontSize.label};
+    font-size: ${theme.fontSize.body};
     color: ${theme.colors.white};
     ${color === 'transparent' && `color: ${theme.colors.text3};`}
   `

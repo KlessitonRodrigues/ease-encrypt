@@ -4,8 +4,7 @@ export const Container = styled.div(
   ({ theme }) => css`
     width: 100%;
     max-width: ${theme.size(300)};
-    margin: ${theme.size(6)} auto;
-    padding: ${theme.size(4)};
+    margin: ${theme.size(2)} auto;
   `
 );
 
@@ -28,8 +27,9 @@ export const ResultText = styled.div(
 );
 
 export const Options = styled.div(
-  () => css`
+  ({ theme }) => css`
     display: flex;
+    margin-bottom: ${theme.size(2)};
   `
 );
 

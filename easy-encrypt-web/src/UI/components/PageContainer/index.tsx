@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 import { RxGithubLogo, RxLockClosed } from 'react-icons/rx';
 import Header from 'src/UI/base/Header';
 
-import { Container } from './styled';
+import { Container, Content } from './styled';
 
 const PageContainer = (props: PropsWithChildren) => (
   <Container>
@@ -12,7 +12,7 @@ const PageContainer = (props: PropsWithChildren) => (
       ghIcon={<RxGithubLogo />}
       ghLink="https://github.com/KlessitonRodrigues/easy-encrypt"
     />
-    {props.children}
+    <Content>{props.children}</Content>
   </Container>
 );
 

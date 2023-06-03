@@ -5,10 +5,14 @@ export const Container = styled.div(
     width: 100%;
     height: 100%;
     max-width: ${theme.size(450)};
-    margin: auto;
+    margin: 0 auto;
     overflow-y: auto;
     background-color: ${theme.colors.bg1};
   `
 );
 
-export const Content = styled.div(() => css``);
+export const Content = styled.div(
+  ({ theme }) => css`
+    padding: ${theme.size(4)};
+  `
+);

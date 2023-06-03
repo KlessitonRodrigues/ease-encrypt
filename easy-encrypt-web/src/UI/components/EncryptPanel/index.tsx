@@ -23,12 +23,6 @@ const EncryptPanel = () => {
       </InputText>
 
       <InputPassword>
-        <Input
-          label="Password"
-          value={form.password}
-          onChange={password => setform({ ...form, password })}
-        />
-
         <OptionsTitle>Encrypt form</OptionsTitle>
         <Options>
           <CheckOption
@@ -48,6 +42,12 @@ const EncryptPanel = () => {
           />
         </Options>
 
+        <Input
+          label="Password"
+          value={form.password}
+          onChange={password => setform({ ...form, password })}
+        />
+
         <Button
           variant="solid"
           iconLeft={<RxLockClosed />}
@@ -57,7 +57,7 @@ const EncryptPanel = () => {
         />
         <Button
           variant="solid"
-          color="yellow"
+          color="green"
           iconLeft={<RxLockOpen2 />}
           label="Decrypt"
           onClick={() => setform(onDecrypt(form))}

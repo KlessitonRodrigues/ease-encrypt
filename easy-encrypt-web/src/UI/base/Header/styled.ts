@@ -9,6 +9,10 @@ export const Container = styled.div(
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.white};
     box-shadow: ${theme.shadow.high};
+
+    @media ${theme.devices.tablet} {
+      padding: ${theme.size(2)};
+    }
   `
 );
 

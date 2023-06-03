@@ -7,9 +7,6 @@
     "allowJs": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationDir": "dist/",
     "outDir": "dist/"
   },
   "include": ["src/"]

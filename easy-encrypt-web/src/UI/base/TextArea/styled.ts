@@ -40,5 +40,6 @@ export const TextAreaInput = styled.textarea(
     color: ${theme.colors.text1};
     background-color: ${theme.colors.bg2};
     border-radius: ${theme.radius.small};
+    font-size: ${theme.fontSize.body};
   `
 );

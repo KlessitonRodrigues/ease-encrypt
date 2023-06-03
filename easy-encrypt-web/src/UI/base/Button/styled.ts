@@ -10,7 +10,7 @@ export const Container = styled.button<{
     align-items: center;
     justify-content: center;
     gap: ${theme.size(2)};
-    min-height: ${theme.size(10)};
+    min-height: ${theme.size(11)};
     min-width: ${theme.size(30)};
     padding: 0 ${theme.size(2)};
     padding-right: ${theme.size(1)};
@@ -62,8 +62,8 @@ export const Container = styled.button<{
 export const Label = styled.span(
   ({ theme }) => css`
     padding: ${theme.size(0.5)} 0;
-    padding-top: ${theme.size(1)};
-    font-size: ${theme.fontSize.label};
+    padding-top: ${theme.size(1.5)};
+    font-size: ${theme.fontSize.body};
     font-weight: bold;
     font-family: monospace;
   `

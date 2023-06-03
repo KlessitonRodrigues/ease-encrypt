@@ -11,7 +11,7 @@ export const Container = styled.View<{ type: InputProps['type'] }>(
 export const Label = styled.Text(
   ({ theme }) => css`
     width: 100%;
-    color: ${theme.colors.main};
+    color: ${theme.colors.text1};
     font-size: ${theme.fontSize.label};
     text-transform: capitalize;
     margin-bottom: ${theme.size(2)};
@@ -26,8 +26,8 @@ export const InputField = styled.TextInput<{ type: InputProps['type'] }>(
     font-size: ${theme.fontSize.body};
     font-weight: bold;
     color: ${theme.colors.text2};
-    background-color: ${theme.colors.bg3};
-    border-radius: ${theme.borderRadius.medium};
+    background-color: ${theme.colors.bg2};
+    border-radius: ${theme.radius.medium};
 
     ${() => {
       switch (type) {
