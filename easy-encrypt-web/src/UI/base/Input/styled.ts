@@ -1,30 +1,29 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div(
-  props => css`
-    margin: ${props.theme.size(1)} 0 ${props.theme.size(4)};
+  ({ theme }) => css`
+    margin-bottom: ${theme.size(6)};
   `
 );
 
 export const Label = styled.label(
-  props => css`
-    padding: ${props.theme.size(2)} 0 0;
-    font-size: ${props.theme.fontSize.label};
-    color: ${props.theme.colors.text1};
+  ({ theme }) => css`
+    font-size: ${theme.fontSize.label};
+    color: ${theme.colors.text1};
     display: flex;
     align-items: center;
-    gap: ${props.theme.size(2)};
+    gap: ${theme.size(1)};
   `
 );
 
 export const InputField = styled.input(
-  props => css`
+  ({ theme }) => css`
     width: 100%;
-    padding: ${props.theme.size(2)} 0;
+    padding: ${theme.size(2)} 0;
     background-color: transparent;
     border: transparent;
-    border-bottom: 1px solid ${props.theme.colors.main};
-    color: ${props.theme.colors.main};
-    font-size: ${props.theme.fontSize.small};
+    border-bottom: 1px solid ${theme.colors.main};
+    color: ${theme.colors.main};
+    font-size: ${theme.fontSize.body};
   `
 );

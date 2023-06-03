@@ -5,10 +5,14 @@ export const Container = styled.div(
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${theme.size(2)} ${theme.size(6)};
+    padding: ${theme.size(2)} ${theme.size(8)};
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.white};
-    box-shadow: ${theme.shadow.medium};
+    box-shadow: ${theme.shadow.high};
+
+    @media ${theme.devices.tablet} {
+      padding: ${theme.size(2)};
+    }
   `
 );
 
@@ -16,7 +20,7 @@ export const Left = styled.div(
   ({ theme }) => css`
     display: flex;
     align-items: center;
-    gap: ${theme.size(4)};
+    gap: ${theme.size(2)};
   `
 );
 
@@ -40,9 +44,10 @@ export const Title = styled.div(
   `
 );
 
-export const GitHubIcon = styled.div(
+export const GitHub = styled.a(
   ({ theme }) => css`
     margin-top: ${theme.size(1)};
     font-size: ${theme.size(11)};
+    color: inherit;
   `
 );

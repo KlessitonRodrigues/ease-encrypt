@@ -17,3 +17,7 @@ export const Row = styled.View(
     margin-bottom: ${theme.size(2)};
   `
 );
+
+export const OptionContainer = styled.View(() => css``);
+
+export const OptionTitle = styled.Text(() => css``);

@@ -1,5 +1,8 @@
 const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const webpack = require('webpack');
+require('dotenv').config({ path: './client.env' });
+
+const compileEnv = new webpack.EnvironmentPlugin(['CLIENT_PRIVATE_KEY']);
 
 module.exports = {
   mode: 'production',
@@ -15,6 +18,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js', '...'],
-    plugins: [new TsconfigPathsPlugin()],
+    plugins: [],
   },
+  plugins: [compileEnv],
 };

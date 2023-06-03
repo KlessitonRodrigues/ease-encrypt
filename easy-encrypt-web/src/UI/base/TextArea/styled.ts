@@ -33,12 +33,13 @@ export const TextAreaInput = styled.textarea(
     outline: none;
     resize: vertical;
     padding: ${theme.size(2)};
-    height: ${theme.size(25)};
-    min-height: ${theme.size(25)};
+    height: ${theme.size(40)};
+    min-height: ${theme.size(30)};
     max-height: ${theme.size(120)};
     border: 2px solid ${theme.colors.text3 + '44'};
     color: ${theme.colors.text1};
     background-color: ${theme.colors.bg2};
     border-radius: ${theme.radius.small};
+    font-size: ${theme.fontSize.body};
   `
 );

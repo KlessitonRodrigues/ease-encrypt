@@ -1,14 +1,18 @@
 import { PropsWithChildren } from 'react';
-import { BsGithub } from 'react-icons/bs';
-import { RxLockClosed } from 'react-icons/rx';
+import { RxGithubLogo, RxLockClosed } from 'react-icons/rx';
 import Header from 'src/UI/base/Header';
 
-import { Container } from './styled';
+import { Container, Content } from './styled';
 
 const PageContainer = (props: PropsWithChildren) => (
   <Container>
-    <Header icon={<RxLockClosed />} title="Easy Encrypt" ghIcon={<BsGithub />} />
-    {props.children}
+    <Header
+      icon={<RxLockClosed />}
+      title="Easy Encrypt"
+      ghIcon={<RxGithubLogo />}
+      ghLink="https://github.com/KlessitonRodrigues/easy-encrypt"
+    />
+    <Content>{props.children}</Content>
   </Container>
 );
 

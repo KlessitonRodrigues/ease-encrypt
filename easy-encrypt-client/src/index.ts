@@ -1,6 +1,6 @@
 import { controllers } from './controllers';
 
-const clientInit = () => {
+const clientInit = (): AppClient => {
   return controllers();
 };
 

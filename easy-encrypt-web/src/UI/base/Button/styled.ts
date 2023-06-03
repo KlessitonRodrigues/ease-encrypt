@@ -9,21 +9,18 @@ export const Container = styled.button<{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: ${theme.size(0.5)};
-    min-height: ${theme.size(10)};
-    min-width: ${theme.size(28)};
-    padding: 0 ${theme.size(3)};
+    gap: ${theme.size(2)};
+    min-height: ${theme.size(11)};
+    min-width: ${theme.size(30)};
+    padding: 0 ${theme.size(2)};
+    padding-right: ${theme.size(1)};
     margin-top: ${theme.size(2)};
     margin-right: ${theme.size(4)};
     border-radius: ${theme.radius.small};
-    transition: opacity 0.1s;
+    transition: opacity 0.2s;
     user-select: none;
     border: none;
     box-shadow: none;
-
-    &:hover {
-      opacity: 0.75;
-    }
 
     ${() => {
       switch (variant) {
@@ -31,13 +28,14 @@ export const Container = styled.button<{
           return css`
             background-color: ${theme.colors.mainBg};
             color: ${theme.colors.white};
-            box-shadow: ${theme.shadow.low};
+            box-shadow: ${theme.shadow.medium};
           `;
         case 'outline':
           return css`
-            color: ${theme.colors.text2};
-            border: 1px solid ${theme.colors.gray};
+            color: ${theme.colors.text3};
+            border: 1px solid ${theme.colors.text3};
             background-color: transparent;
+            box-shadow: ${theme.shadow.low};
           `;
       }
     }}
@@ -53,15 +51,19 @@ export const Container = styled.button<{
       }
     }}
 
-    ${disabled && `filter: grayscale(1); cursor: not-allowed; opacity: 0.6;`}
+    &:hover {
+      opacity: 0.8;
+    }
+
+    ${disabled && `cursor: not-allowed; filter: grayscale(1);`}
   `
 );
 
 export const Label = styled.span(
   ({ theme }) => css`
-    padding: ${theme.size(0.5)} ${theme.size(2)};
-    padding-top: ${theme.size(1)};
-    font-size: ${theme.fontSize.label};
+    padding: ${theme.size(0.5)} 0;
+    padding-top: ${theme.size(1.5)};
+    font-size: ${theme.fontSize.body};
     font-weight: bold;
     font-family: monospace;
   `

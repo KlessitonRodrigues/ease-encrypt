@@ -16,6 +16,7 @@ npm-debug.*
 *.orig.*
 *.apk
 *.aab
+*.env
 
 # macOS
 .DS_Store
