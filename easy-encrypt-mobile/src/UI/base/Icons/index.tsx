@@ -13,10 +13,12 @@ export const Icons = (props: IconsProps) => {
     case 'lock':
       return <IonIcons name="lock-closed-outline" {...iconProps} />;
     case 'lock-fill':
-      return <IonIcons name="lock-closed" {...iconProps} />;
+      return <IonIcons name="lock-closed-outline" {...iconProps} />;
     case 'lock-open':
       return <IonIcons name="lock-open-outline" {...iconProps} />;
     case 'copy':
       return <IonIcons name="copy-outline" {...iconProps} />;
+    case 'settings':
+      return <IonIcons name="settings-outline" {...iconProps} />;
   }
 };

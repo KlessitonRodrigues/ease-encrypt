@@ -47,9 +47,10 @@ type IfProps = {
 };
 
 type IconsProps = {
-  type: 'lock' | 'lock-fill' | 'lock-open' | 'copy';
+  type: 'lock' | 'lock-fill' | 'lock-open' | 'copy' | 'settings';
   color?: string;
   size?: number;
+  onPress?: () => void;
 };
 
 type CheckOptionProps = {

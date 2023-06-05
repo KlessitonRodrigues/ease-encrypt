@@ -12,7 +12,7 @@ export const defaultTheme: Theme = {
     text1: materialColors.grey['800'],
     text2: materialColors.grey['700'],
     text3: materialColors.grey['600'],
-    gray: materialColors.grey['400'],
+    gray: materialColors.grey['500'],
     yellow: atlassianColors.yellow['600'],
     red: atlassianColors.red['800'],
     green: materialColors.lightGreen['800'],
@@ -70,6 +70,6 @@ export const defaultThemeDark = {
     text1: materialColors.grey['300'],
     text2: materialColors.grey['400'],
     text3: materialColors.grey['500'],
-    gray: materialColors.grey['700'],
+    gray: materialColors.grey['600'],
   },
 };

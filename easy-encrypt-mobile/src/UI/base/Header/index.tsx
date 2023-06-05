@@ -1,13 +1,15 @@
-import IonIcons from '@expo/vector-icons/Ionicons';
-
+import { Icons } from '../Icons';
 import { Container, Row, Title } from './styled';
 
 const Header = () => {
   return (
     <Container>
       <Row>
-        <IonIcons name="lock-closed" color={'white'} size={28} />
+        <Icons type="lock-fill" size={26} />
         <Title>Easy Encrypt</Title>
+      </Row>
+      <Row>
+        <Icons type="settings" size={26} />
       </Row>
     </Container>
   );

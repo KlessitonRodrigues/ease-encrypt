@@ -1,4 +1,3 @@
-import IonIcons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
 import Button from 'src/UI/base/Button';
 import CheckOption from 'src/UI/base/CheckOption';
@@ -37,12 +36,14 @@ const EncryptPanel = () => {
         <Button
           iconLeft={<Icons type="lock" />}
           label="Encrypt"
+          disabled={!form.inputText}
           onClick={() => setForm(onEncrypt(form))}
         />
         <Button
           iconLeft={<Icons type="lock-open" />}
           label="Decrypt"
           color="green"
+          disabled={!form.inputText}
           onClick={() => setForm(onDecrypt(form))}
         />
       </Row>
@@ -52,6 +53,7 @@ const EncryptPanel = () => {
         iconLeft={<Icons type="copy" color="gray" />}
         label="Copy"
         color="transparent"
+        disabled={!form.outputText}
         onClick={() => copyToClipboard(form.outputText)}
       />
     </Container>
