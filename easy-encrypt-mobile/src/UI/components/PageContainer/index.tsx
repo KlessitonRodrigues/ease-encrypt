@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { PropsWithChildren } from 'react';
+import SplideUp from 'src/UI/base/Animations/splideUp';
 import Header from 'src/UI/base/Header';
 import { defaultTheme, defaultThemeDark } from 'src/styles/theme';
 import { isDarkMode } from 'src/utils/native';
@@ -13,7 +14,9 @@ const PageContainer = (props: PropsWithChildren) => {
       <Container>
         <StatusBar style="inverted" />
         <Header />
-        <Content>{props.children}</Content>
+        <Content>
+          <SplideUp>{props.children}</SplideUp>
+        </Content>
       </Container>
     </ThemeProvider>
   );

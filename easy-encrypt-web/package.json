@@ -8,7 +8,9 @@
     "watch": "webpack --watch",
     "serve": "webpack serve",
     "start": "http-server dist/",
-    "lint": "prettier -c -w ./src"
+    "lint": "prettier -c -w ./src",
+    "prebuild": "yarn lint",
+    "link-types": "cd src && ln -s ../../@types"
   },
   "dependencies": {
     "react": "18.2.0",

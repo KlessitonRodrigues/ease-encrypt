@@ -59,3 +59,7 @@ type CheckOptionProps = {
   title?: string;
   description?: string | string[];
 };
+
+type AnimationsProps = {
+  children?: React.ReactNode;
+};

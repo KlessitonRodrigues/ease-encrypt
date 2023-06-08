@@ -4,7 +4,7 @@ const Button = (props: ButtonProps) => {
   const { label, iconLeft, color, disabled, onClick } = props;
 
   return (
-    <Container color={color} disabled={disabled} onPress={onClick}>
+    <Container color={color} onPress={onClick}>
       <Icon>{iconLeft}</Icon>
       <Label color={color}>{label}</Label>
     </Container>

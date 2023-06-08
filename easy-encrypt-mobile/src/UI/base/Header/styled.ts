@@ -4,7 +4,7 @@ export const Container = styled.View(
   ({ theme }) => css`
     width: 100%;
     padding: ${theme.size(6)};
-    padding-top: ${theme.size(25)};
+    padding-top: ${theme.size(28)};
     background-color: ${theme.colors.mainBg};
     display: flex;
     flex-direction: row;
@@ -24,6 +24,7 @@ export const Row = styled.View(
   ({ theme }) => css`
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: ${theme.size(4)};
   `
 );

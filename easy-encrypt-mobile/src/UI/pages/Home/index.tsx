@@ -1,5 +1,5 @@
-import EncryptPanel from '../../components/EncryptPanel';
-import PageContainer from '../../components/PageContainer';
+import EncryptPanel from 'src/UI/components/EncryptPanel';
+import PageContainer from 'src/UI/components/PageContainer';
 
 const HomePage = () => {
   return (

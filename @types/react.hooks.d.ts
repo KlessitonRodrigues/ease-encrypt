@@ -1,6 +1,6 @@
 type GlobalState = {
   path: string;
-  settings: SettingsDB;
+  darkTheme: boolean;
 };
 
 type GlobalContext = [GlobalState, React.Dispatch<React.SetStateAction<GlobalState>>];

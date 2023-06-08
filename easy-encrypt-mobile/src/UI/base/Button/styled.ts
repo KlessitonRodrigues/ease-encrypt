@@ -1,10 +1,7 @@
 import styled, { css } from 'styled-components/native';
 
-export const Container = styled.TouchableOpacity<{
-  color: ButtonProps['color'];
-  disabled: boolean;
-}>(
-  ({ theme, color, disabled }) => css`
+export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }>(
+  ({ theme, color }) => css`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,7 +14,6 @@ export const Container = styled.TouchableOpacity<{
     padding: 0 ${theme.size(4)};
     background-color: ${theme.colors.mainBg};
     border-radius: ${theme.radius.medium};
-    ${disabled && 'opacity:0.5'};
 
     ${() => {
       switch (color) {
@@ -45,7 +41,6 @@ export const Label = styled.Text<{ color: ButtonProps['color'] }>(
     padding-right: ${theme.size(2)};
     padding-bottom: ${theme.size(1)};
     text-transform: capitalize;
-    font-family: monospace;
     font-weight: bold;
     text-align: center;
     font-size: ${theme.fontSize.body};

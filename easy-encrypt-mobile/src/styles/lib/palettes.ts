@@ -292,7 +292,7 @@ export const materialColors = {
     '900': '#263238',
   },
   black: '#141414',
-  white: '#e5e5e5',
+  white: '#F4F4F4',
 };
 
 export const atlassianColors = {

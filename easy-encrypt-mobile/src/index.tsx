@@ -1,7 +1,12 @@
-import HomePage from './UI/pages/Home';
+import Router from './UI/router';
+import { GlobalProvider } from './hooks/useGlobalContext';
 
 const App = () => {
-  return <HomePage />;
+  return (
+    <GlobalProvider>
+      <Router />
+    </GlobalProvider>
+  );
 };
 
 export default App;

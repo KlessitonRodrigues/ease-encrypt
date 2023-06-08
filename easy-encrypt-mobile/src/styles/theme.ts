@@ -16,7 +16,7 @@ export const defaultTheme: Theme = {
     yellow: atlassianColors.yellow['600'],
     red: atlassianColors.red['800'],
     green: materialColors.lightGreen['800'],
-    white: materialColors.white,
+    white: materialColors.grey['300'],
     black: materialColors.black,
   },
   fontSize: {
@@ -71,5 +71,6 @@ export const defaultThemeDark = {
     text2: materialColors.grey['400'],
     text3: materialColors.grey['500'],
     gray: materialColors.grey['600'],
+    white: materialColors.grey['400'],
   },
 };
