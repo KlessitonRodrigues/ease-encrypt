@@ -71,6 +71,6 @@ export const defaultThemeDark = {
     text2: materialColors.grey['400'],
     text3: materialColors.grey['500'],
     gray: materialColors.grey['600'],
-    white: materialColors.grey['400'],
+    white: materialColors.grey['300'],
   },
 };

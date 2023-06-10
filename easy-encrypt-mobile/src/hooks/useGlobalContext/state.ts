@@ -1,4 +1,5 @@
+import { isDarkMode } from 'src/utils/native';
+
 export const initialGlobalState: GlobalState = {
-  path: '/',
-  darkTheme: false,
+  darkTheme: isDarkMode(),
 };

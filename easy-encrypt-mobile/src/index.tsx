@@ -1,10 +1,13 @@
 import Router from './UI/router';
 import { GlobalProvider } from './hooks/useGlobalContext';
+import { RouteProvider } from './hooks/usePathContext';
 
 const App = () => {
   return (
     <GlobalProvider>
-      <Router />
+      <RouteProvider>
+        <Router />
+      </RouteProvider>
     </GlobalProvider>
   );
 };

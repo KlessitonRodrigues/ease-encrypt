@@ -1,22 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { PropsWithChildren } from 'react';
-import SplideUp from 'src/UI/base/Animations/splideUp';
 import Header from 'src/UI/base/Header';
+import useGlobalContext from 'src/hooks/useGlobalContext';
 import { defaultTheme, defaultThemeDark } from 'src/styles/theme';
-import { isDarkMode } from 'src/utils/native';
 import { ThemeProvider } from 'styled-components/native';
 
 import { Container, Content } from './styled';
 
 const PageContainer = (props: PropsWithChildren) => {
+  const [global] = useGlobalContext();
+
   return (
-    <ThemeProvider theme={isDarkMode() ? defaultThemeDark : defaultTheme}>
+    <ThemeProvider theme={global.darkTheme ? defaultThemeDark : defaultTheme}>
       <Container>
         <StatusBar style="inverted" />
         <Header />
-        <Content>
-          <SplideUp>{props.children}</SplideUp>
-        </Content>
+        <Content>{props.children}</Content>
       </Container>
     </ThemeProvider>
   );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from 'src/UI/base/Button';
 import CheckOption from 'src/UI/base/CheckOption';
-import { Icons } from 'src/UI/base/Icons';
+import Icons from 'src/UI/base/Icons';
 import Input from 'src/UI/base/Input';
 
 import { copyToClipboard } from './services/copyText';

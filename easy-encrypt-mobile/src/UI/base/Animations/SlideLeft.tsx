@@ -1,9 +1,9 @@
 import { useEffect, useMemo } from 'react';
 import { Animated } from 'react-native';
 
-const SlideUP = (props: AnimationsProps) => {
+const SlideLeft = (props: AnimationsProps) => {
   const { children } = props;
-  const fadeAnim = useMemo(() => new Animated.ValueXY({ x: 200, y: 0 }), []);
+  const fadeAnim = useMemo(() => new Animated.ValueXY({ x: 400, y: 0.4 }), []);
 
   useEffect(() => {
     Animated.timing(fadeAnim.x, {
@@ -16,7 +16,7 @@ const SlideUP = (props: AnimationsProps) => {
       duration: 600,
       useNativeDriver: true,
     }).start();
-  }, [fadeAnim]);
+  }, []);
 
   return (
     <Animated.View
@@ -32,4 +32,4 @@ const SlideUP = (props: AnimationsProps) => {
   );
 };
 
-export default SlideUP;
+export default SlideLeft;

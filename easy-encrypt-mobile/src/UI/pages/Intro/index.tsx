@@ -1,15 +1,12 @@
 import SlideUp from 'src/UI/base/Animations/SlideUp';
-import EncryptPanel from 'src/UI/components/EncryptPanel';
 import PageContainer from 'src/UI/components/PageContainer';
 
-const HomePage = () => {
+const IntroPage = () => {
   return (
     <PageContainer>
-      <SlideUp>
-        <EncryptPanel />
-      </SlideUp>
+      <SlideUp></SlideUp>
     </PageContainer>
   );
 };
 
-export default HomePage;
+export default IntroPage;

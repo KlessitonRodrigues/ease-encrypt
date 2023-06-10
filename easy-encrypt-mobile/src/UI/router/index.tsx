@@ -1,18 +1,18 @@
-import useGlobalContext from 'src/hooks/useGlobalContext';
+import usePathContext from 'src/hooks/usePathContext';
 
 import HomePage from '../pages/Home';
-import SettingsPage from '../pages/Settings';
+import IntroPage from '../pages/Intro';
 
 const Router = () => {
-  const [global, setGlobal] = useGlobalContext();
+  const [path] = usePathContext();
 
-  switch (global.path) {
+  switch (path.address) {
     case '/home':
       return <HomePage />;
-    case '/settings':
-      return <SettingsPage />;
+    case '/intro':
+      return <IntroPage />;
     default:
-      return <HomePage />;
+      return <IntroPage />;
   }
 };
 

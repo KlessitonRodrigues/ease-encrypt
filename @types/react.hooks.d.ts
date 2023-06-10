@@ -1,15 +1,18 @@
+type PathState = {
+  address: string;
+};
+
+type PathContext = [PathState, React.Dispatch<React.SetStateAction<PathState>>];
+
 type GlobalState = {
-  path: string;
   darkTheme: boolean;
 };
 
 type GlobalContext = [GlobalState, React.Dispatch<React.SetStateAction<GlobalState>>];
 
-type ActionState = {
-  action:
-    | { to: ''; type: ''; data: null }
-    | { to: 'EDIT_PANEL'; type: 'EDIT'; data: CalendarEvent }
-    | { to: 'EDIT_PANEL'; type: 'EDIT'; data: CalendarEvent };
+type SendDataState = {
+  to: 'TESTING';
+  data: { something: string };
 };
 
-type ActionsContext = [ActionState, React.Dispatch<React.SetStateAction<ActionState>>];
+type SendDataContext = [SendDataState, React.Dispatch<React.SetStateAction<SendDataState>>];

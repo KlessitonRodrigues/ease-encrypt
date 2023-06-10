@@ -29,8 +29,8 @@
   "private": true,
   "workspaces": {
     "nohoist": [
-      "@expo/vector-icons",
-      "expo"
+      "expo",
+      "@expo/vector-icons"
     ]
   }
 }
