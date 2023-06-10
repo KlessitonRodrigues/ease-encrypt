@@ -1,28 +1,20 @@
-export const enLang: LanguageDefinition = {
-  Pages: {
-    Home: {
-      textInputLabel: 'Texto',
-      passwordInputLabel: 'Senha',
-      encryptFormLabel: 'Tipo de criptografia',
-      encryptFormContent: {
-        checkbox1: {
-          label: 'Forte',
-          item1: 'Usa algoritmo de criptografia EAS',
-        },
-        checkbox2: {
-          label: 'Muito Forte',
-          item1: 'Usa algoritmo de criptografia EAS',
-          item2: 'Somente pode ser desencriptado com Easy Encrypt',
-        },
-      },
-      buttons: {
-        button1: 'Encriptar',
-        button2: 'Desencriptar',
-      },
-      resultInputLabel: 'Resultado',
-      footerButtons: {
-        button1: 'Copiar',
-      },
+export const enLang: MobileLanguageDefinition = {
+  page: {
+    home: {
+      textInput: 'Text',
+      passwordInput: 'Password',
+      encryptType: 'Encrypt type',
+      encryptTypeCheckbox1: 'Strong',
+      encryptTypeCheckbox1Items: ['Encrypt using EAS algorith'],
+      encryptTypeCheckbox2: 'Very Strong',
+      encryptTypeCheckbox2Items: [
+        'Encrypt using EAS algorith',
+        'Only can be decrypted using Easy encrypt',
+      ],
+      encryptButton: 'Encrypt',
+      decryptButton: 'Decrypt',
+      resultInput: 'Result text',
+      copyButton: 'Copy',
     },
   },
 };

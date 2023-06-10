@@ -8,50 +8,52 @@ import { copyToClipboard } from './services/copyText';
 import { initialData, onDecrypt, onEncrypt } from './services/encrypt';
 import { Container, OptionContainer, OptionTitle, Row } from './styled';
 
-const EncryptPanel = () => {
+const EncryptPanel = (props: EncryptPanelProps) => {
+  const { lang } = props;
+  const text = lang.text.page.home;
   const [form, setForm] = useState(initialData);
 
   return (
     <Container>
-      <Input label="Text" onChange={inputText => setForm({ ...form, inputText })} />
-      <Input label="Password" onChange={password => setForm({ ...form, password })} />
+      <Input label={text.textInput} onChange={inputText => setForm({ ...form, inputText })} />
+      <Input label={text.passwordInput} onChange={password => setForm({ ...form, password })} />
 
       <OptionContainer>
-        <OptionTitle>Encrypt form</OptionTitle>
+        <OptionTitle>{text.encryptType}</OptionTitle>
         <CheckOption
           checked={!form.usePrivateKey}
           onChange={() => setForm({ ...form, usePrivateKey: false })}
-          title="Strong"
-          description="Encrypt using EAS algorith"
+          title={text.encryptTypeCheckbox1}
+          description={text.encryptTypeCheckbox1Items}
         />
         <CheckOption
           checked={form.usePrivateKey}
           onChange={() => setForm({ ...form, usePrivateKey: true })}
-          title="Very Strong"
-          description={['Encrypt using EAS algorith', 'Only can be decrypted using Easy encrypt']}
+          title={text.encryptTypeCheckbox2}
+          description={text.encryptTypeCheckbox2Items}
         />
       </OptionContainer>
 
       <Row>
         <Button
           iconLeft={<Icons type="lock" />}
-          label="Encrypt"
+          label={text.encryptButton}
           disabled={!form.inputText}
           onClick={() => setForm(onEncrypt(form))}
         />
         <Button
           iconLeft={<Icons type="lock-open" />}
-          label="Decrypt"
+          label={text.decryptButton}
           color="green"
           disabled={!form.inputText}
           onClick={() => setForm(onDecrypt(form))}
         />
       </Row>
 
-      <Input type="textArea" label="Result Text" value={form.outputText} readonly />
+      <Input type="textArea" label={text.resultInput} value={form.outputText} readonly />
       <Button
         iconLeft={<Icons type="copy" color="gray" />}
-        label="Copy"
+        label={text.copyButton}
         color="transparent"
         disabled={!form.outputText}
         onClick={() => copyToClipboard(form.outputText)}

@@ -1,13 +1,16 @@
 import Router from './UI/router';
 import { GlobalProvider } from './hooks/useGlobalContext';
+import { LanguageProvider } from './hooks/useLangContext';
 import { RouteProvider } from './hooks/usePathContext';
 
 const App = () => {
   return (
     <GlobalProvider>
-      <RouteProvider>
-        <Router />
-      </RouteProvider>
+      <LanguageProvider>
+        <RouteProvider>
+          <Router />
+        </RouteProvider>
+      </LanguageProvider>
     </GlobalProvider>
   );
 };

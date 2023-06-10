@@ -1,10 +1,11 @@
-import React from 'react';
+import { PropsWithChildren, createContext, useContext, useEffect, useState } from 'react';
 
-const initialPath: PathState = { address: '/home' };
-const pathContext = React.createContext<PathContext>([initialPath, () => {}]);
+import { initialLangState } from './state';
 
-export const RouteProvider = (props: React.PropsWithChildren) => (
-  <pathContext.Provider value={React.useState(initialPath)}>{props.children}</pathContext.Provider>
+const PathContext = createContext<MobileLangContext>([initialLangState, () => {}]);
+
+export const LanguageProvider = (props: PropsWithChildren) => (
+  <PathContext.Provider value={useState(initialLangState)}>{props.children}</PathContext.Provider>
 );
 
-export default () => React.useContext(pathContext);
+export default () => useContext(PathContext);

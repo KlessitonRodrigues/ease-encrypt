@@ -16,3 +16,10 @@ type SendDataState = {
 };
 
 type SendDataContext = [SendDataState, React.Dispatch<React.SetStateAction<SendDataState>>];
+
+type MobileLangState = {
+  type: 'en' | 'pt';
+  text: MobileLanguageDefinition;
+};
+
+type MobileLangContext = [MobileLangState, Dispatch<SetStateAction<MobileLangState>>];

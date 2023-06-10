@@ -63,3 +63,7 @@ type CheckOptionProps = {
 type AnimationsProps = {
   children?: React.ReactNode;
 };
+
+type EncryptPanelProps = {
+  lang: MobileLangState;
+};

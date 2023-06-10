@@ -28,3 +28,12 @@ export const Row = styled.View(
     gap: ${theme.size(4)};
   `
 );
+
+export const LangSwitch = styled.Text(
+  ({ theme }) => css`
+    margin: 0 ${theme.size(2)};
+    color: ${theme.colors.white};
+    font-size: ${theme.fontSize.h5};
+    text-transform: uppercase;
+  `
+);

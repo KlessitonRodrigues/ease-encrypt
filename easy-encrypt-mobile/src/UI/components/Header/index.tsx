@@ -1,10 +1,13 @@
 import useGlobalContext from 'src/hooks/useGlobalContext';
+import useLangContext from 'src/hooks/useLangContext';
 
-import Icons from '../Icons';
-import { Container, Row, Title } from './styled';
+import Icons from '../../base/Icons';
+import { langSwitch } from './service/langSwitch';
+import { Container, LangSwitch, Row, Title } from './styled';
 
 const Header = () => {
   const [global, setGlobal] = useGlobalContext();
+  const [lang, setLang] = useLangContext();
 
   return (
     <Container>
@@ -13,6 +16,7 @@ const Header = () => {
         <Title>Easy Encrypt</Title>
       </Row>
       <Row>
+        <LangSwitch onPress={() => setLang(langSwitch(lang))}>{lang.type}</LangSwitch>
         <Icons
           type={global.darkTheme ? 'moon-fill' : 'moon'}
           size={26}
