@@ -1,13 +1,13 @@
-import useGlobalContext from 'src/hooks/useGlobalContext';
 import useLangContext from 'src/hooks/useLangContext';
+import useThemeTypeContext from 'src/hooks/useThemeTypeContext';
 
 import Icons from '../../base/Icons';
 import { langSwitch } from './service/langSwitch';
 import { Container, LangSwitch, Row, Title } from './styled';
 
 const Header = () => {
-  const [global, setGlobal] = useGlobalContext();
   const [lang, setLang] = useLangContext();
+  const [themeType, setThemeType] = useThemeTypeContext();
 
   return (
     <Container>
@@ -18,9 +18,9 @@ const Header = () => {
       <Row>
         <LangSwitch onPress={() => setLang(langSwitch(lang))}>{lang.type}</LangSwitch>
         <Icons
-          type={global.darkTheme ? 'moon-fill' : 'moon'}
+          type={themeType.darkTheme ? 'moon-fill' : 'moon'}
           size={26}
-          onPress={() => setGlobal({ ...global, darkTheme: !global.darkTheme })}
+          onChange={() => setThemeType({ ...themeType, darkTheme: !themeType.darkTheme })}
         />
       </Row>
     </Container>
