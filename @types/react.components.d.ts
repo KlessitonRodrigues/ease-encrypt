@@ -1,8 +1,8 @@
 type HeaderProps = {
   icon: React.ReactElement;
   title: string;
-  ghIcon: React.ReactElement;
-  ghLink: string;
+  githubIcon: React.ReactElement;
+  githubLink: string;
 };
 
 type TextAreaProps = {
@@ -18,7 +18,7 @@ type ButtonProps = {
   iconRight?: React.ReactElement;
   variant?: 'base' | 'outline' | 'solid';
   color?: 'main' | 'red' | 'blue' | 'green' | 'yellow' | 'transparent';
-  onClick?: () => void;
+  onChange?: () => void;
   disabled?: boolean;
 };
 
@@ -49,8 +49,19 @@ type IfProps = {
 type IconsProps = {
   color?: string;
   size?: number;
-  onPress?: () => void;
-  type: 'lock' | 'lock-fill' | 'lock-open' | 'copy' | 'settings' | 'sun' | 'moon' | 'moon-fill';
+  marginY?: number;
+  marginX?: number;
+  onChange?: () => void;
+  type:
+    | 'lock'
+    | 'lock-fill'
+    | 'lock-open'
+    | 'copy'
+    | 'settings'
+    | 'sun'
+    | 'moon'
+    | 'moon-fill'
+    | 'gh-logo';
 };
 
 type CheckOptionProps = {

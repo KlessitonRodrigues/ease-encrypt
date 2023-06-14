@@ -2,11 +2,12 @@ import IonIcons from '@expo/vector-icons/Ionicons';
 import { useTheme } from 'styled-components';
 
 const Icons = (props: IconsProps) => {
-  const { type } = props;
+  const { type, onChange } = props;
   const theme = useTheme();
 
   const iconProps = {
     color: theme.colors.white,
+    onPress: onChange,
     size: 20,
     ...props,
   };

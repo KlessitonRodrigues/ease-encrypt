@@ -7,14 +7,14 @@ export const Container = styled.div<{ checked: boolean }>(
     position: relative;
     gap: ${theme.size(4)};
     padding: ${theme.size(3)} ${theme.size(4)};
-    margin: ${theme.size(4)} 0;
+    margin: ${theme.size(2)} 0;
     margin-right: ${theme.size(4)};
     border: 1px solid transparent;
     border-radius: ${theme.radius.medium};
     cursor: pointer;
     box-shadow: ${theme.shadow.low};
     background-color: ${theme.colors.bg3};
-    transition: 0.3s;
+    transition: border 0.3s;
 
     ${checked && `background-color: ${theme.colors.bg1}; border-color: ${theme.colors.main}`};
 

@@ -5,7 +5,7 @@ export const Container = styled.div(
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${theme.size(2)} ${theme.size(8)};
+    padding: ${theme.size(3)} ${theme.size(8)};
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.white};
     box-shadow: ${theme.shadow.high};
@@ -33,21 +33,32 @@ export const Right = styled.div(
 
 export const Icon = styled.div(
   ({ theme }) => css`
-    margin-top: ${theme.size(1)};
-    font-size: ${theme.size(10)};
+    font-size: ${theme.size(9)};
   `
 );
 
 export const Title = styled.div(
   ({ theme }) => css`
     font-size: ${theme.fontSize.h1};
+    margin-bottom: ${theme.size(1)};
+  `
+);
+
+export const LangSwitch = styled.div(
+  ({ theme }) => css`
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: ${theme.fontSize.body};
   `
 );
 
 export const GitHub = styled.a(
   ({ theme }) => css`
-    margin-top: ${theme.size(1)};
-    font-size: ${theme.size(11)};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: ${theme.size(10)};
     color: inherit;
   `
 );

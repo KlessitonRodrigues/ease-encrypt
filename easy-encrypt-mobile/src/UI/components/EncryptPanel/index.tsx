@@ -39,14 +39,14 @@ const EncryptPanel = (props: EncryptPanelProps) => {
           iconLeft={<Icons type="lock" />}
           label={text.encryptButton}
           disabled={!form.inputText}
-          onClick={() => setForm(onEncrypt(form))}
+          onChange={() => setForm(onEncrypt(form))}
         />
         <Button
           iconLeft={<Icons type="lock-open" />}
           label={text.decryptButton}
           color="green"
           disabled={!form.inputText}
-          onClick={() => setForm(onDecrypt(form))}
+          onChange={() => setForm(onDecrypt(form))}
         />
       </Row>
 
@@ -56,7 +56,7 @@ const EncryptPanel = (props: EncryptPanelProps) => {
         label={text.copyButton}
         color="transparent"
         disabled={!form.outputText}
-        onClick={() => copyToClipboard(form.outputText)}
+        onChange={() => copyToClipboard(form.outputText)}
       />
     </Container>
   );

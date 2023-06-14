@@ -9,7 +9,6 @@
     "test-w": "jest --watch",
     "test-cover": "jest --coverage",
     "build": "webpack",
-    "postinstall": "yarn build",
     "link-types": "cd src && ln -s ../../@types"
   },
   "dependencies": {

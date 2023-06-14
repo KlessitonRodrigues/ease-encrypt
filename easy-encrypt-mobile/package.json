@@ -7,8 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build-android": "eas build -p android -e dev --local --clear-cache",
-    "build-android-store": "eas build -p android -e dev-store --local --clear-cache",
+    "build-android": "eas build -p android -e dev --local",
+    "build-android-store": "eas build -p android -e dev-store --local",
     "link-types": "cd src && ln -s ../../@types"
   },
   "dependencies": {
