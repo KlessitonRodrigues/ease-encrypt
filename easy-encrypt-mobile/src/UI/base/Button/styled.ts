@@ -8,7 +8,7 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
     justify-content: center;
     align-self: flex-start;
     gap: ${theme.size(2)};
-    height: ${theme.size(20)};
+    height: ${theme.size(18)};
     min-width: ${theme.size(40)};
     margin: ${theme.size(4)} 0;
     padding: 0 ${theme.size(4)};
@@ -27,7 +27,7 @@ export const Container = styled.TouchableOpacity<{ color: ButtonProps['color'] }
           return css`
             background-color: transparent;
             border-width: 1.5px;
-            border-color: ${theme.colors.text3};
+            border-color: ${theme.colors.gray};
           `;
       }
     }}
@@ -39,9 +39,8 @@ export const Icon = styled.View(() => css``);
 export const Label = styled.Text<{ color: ButtonProps['color'] }>(
   ({ theme, color }) => css`
     padding-right: ${theme.size(2)};
-    padding-bottom: ${theme.size(0)};
+    padding-bottom: ${theme.size(1)};
     text-transform: capitalize;
-    font-family: monospace;
     font-weight: bold;
     text-align: center;
     font-size: ${theme.fontSize.body};

@@ -9,74 +9,73 @@ import { copyToClipboard } from './services/copyText';
 import { initialData, onDecrypt, onEncrypt } from './services/handleForm';
 import { Container, InputPassword, InputText, Options, OptionsTitle, ResultText } from './styled';
 
-const EncryptPanel = () => {
+const EncryptPanel = (props: EncryptPanelProps) => {
+  const { lang } = props;
+  const home = lang.text.page.home;
   const [form, setform] = useState(initialData);
 
   return (
     <Container>
       <InputText>
         <TextArea
-          label="Text"
+          label={home.textInput}
           value={form.inputText}
           onChange={inputText => setform({ ...form, inputText })}
         />
       </InputText>
 
       <InputPassword>
-        <OptionsTitle>Encrypt form</OptionsTitle>
+        <OptionsTitle>{home.encryptType}</OptionsTitle>
         <Options>
           <CheckOption
-            title="Strong"
-            description="Encrypt using EAS algorithm"
+            title={home.encryptTypeCheckbox1}
+            description={home.encryptTypeCheckbox1Items}
             checked={!form.usePrivateKey}
             onChange={() => setform({ ...form, usePrivateKey: false })}
           />
           <CheckOption
-            title="Very Strong"
-            description={[
-              'Encrypt using EAS algorithm',
-              'Only can be descrypted using Easy Encrypt',
-            ]}
+            title={home.encryptTypeCheckbox2}
+            description={home.encryptTypeCheckbox2Items}
             checked={form.usePrivateKey}
             onChange={() => setform({ ...form, usePrivateKey: true })}
           />
         </Options>
 
         <Input
-          label="Password"
+          label={home.passwordInput}
           value={form.password}
           onChange={password => setform({ ...form, password })}
         />
 
         <Button
+          label={home.encryptButton}
           variant="solid"
           iconLeft={<RxLockClosed />}
-          label="Encrypt"
-          onClick={() => setform(onEncrypt(form))}
+          onChange={() => setform(onEncrypt(form))}
           disabled={!form.inputText}
         />
         <Button
+          label={home.decryptButton}
           variant="solid"
           color="green"
           iconLeft={<RxLockOpen2 />}
-          label="Decrypt"
-          onClick={() => setform(onDecrypt(form))}
+          onChange={() => setform(onDecrypt(form))}
           disabled={!form.inputText}
         />
       </InputPassword>
 
       <ResultText>
         <TextArea
-          label="Result Text"
+          label={home.resultInput}
           value={form.outputText}
           onChange={outputText => setform({ ...form, outputText })}
         />
         <Button
+          label={home.copyButton}
           variant="outline"
           iconLeft={<RxCopy />}
-          label="Copy"
           disabled={!form.outputText}
-          onClick={() => copyToClipboard(form.outputText)}
+          onChange={() => copyToClipboard(form.outputText)}
         />
       </ResultText>
     </Container>

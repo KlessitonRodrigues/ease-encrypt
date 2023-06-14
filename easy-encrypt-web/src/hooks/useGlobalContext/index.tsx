@@ -1,14 +1,13 @@
-import React from 'react';
+import { PropsWithChildren, createContext, useContext, useState } from 'react';
 
 import { initialGlobalState } from './state';
 
-const globalContext = React.createContext<GlobalContext>([initialGlobalState, () => {}]);
+const globalContext = createContext<GlobalContext>([initialGlobalState, () => {}]);
 
-export const GlobalProvider = (props: React.PropsWithChildren) => {
-  const state = React.useState(initialGlobalState);
-  return <globalContext.Provider value={state}>{props.children}</globalContext.Provider>;
-};
+export const GlobalProvider = (props: PropsWithChildren) => (
+  <globalContext.Provider value={useState(initialGlobalState)}>
+    {props.children}
+  </globalContext.Provider>
+);
 
-export default () => {
-  return React.useContext(globalContext);
-};
+export default () => useContext(globalContext);

@@ -3,17 +3,16 @@ import styled, { css } from 'styled-components';
 export const Container = styled.button<{
   variant?: ButtonProps['variant'];
   color?: ButtonProps['color'];
-  disabled?: boolean;
 }>(
-  ({ theme, variant, color, disabled }) => css`
+  ({ theme, variant, color }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: ${theme.size(2)};
     min-height: ${theme.size(11)};
     min-width: ${theme.size(30)};
-    padding: 0 ${theme.size(2)};
-    padding-right: ${theme.size(1)};
+    padding: 0 ${theme.size(3)};
+    padding-right: ${theme.size(2)};
     margin-top: ${theme.size(2)};
     margin-right: ${theme.size(4)};
     border-radius: ${theme.radius.small};
@@ -54,24 +53,22 @@ export const Container = styled.button<{
     &:hover {
       opacity: 0.8;
     }
-
-    ${disabled && `cursor: not-allowed; filter: grayscale(1);`}
   `
 );
 
 export const Label = styled.span(
   ({ theme }) => css`
     padding: ${theme.size(0.5)} 0;
-    padding-top: ${theme.size(1.5)};
+    padding-top: ${theme.size(1)};
     font-size: ${theme.fontSize.body};
+    font-family: sans-serif;
     font-weight: bold;
-    font-family: monospace;
   `
 );
 
 export const Icon = styled.div(
   ({ theme }) => css`
     display: flex;
-    font-size: ${theme.size(5)};
+    font-size: ${theme.size(6)};
   `
 );

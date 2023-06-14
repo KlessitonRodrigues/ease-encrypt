@@ -20,4 +20,9 @@ export const Row = styled.View(
 
 export const OptionContainer = styled.View(() => css``);
 
-export const OptionTitle = styled.Text(() => css``);
+export const OptionTitle = styled.Text(
+  ({ theme }) => css`
+    color: ${theme.colors.text1};
+    margin-bottom: ${theme.size(2)};
+  `
+);
