@@ -1,15 +1,16 @@
 import IonIcons from '@expo/vector-icons/Ionicons';
+import { StyleProp, TextStyle } from 'react-native';
 import { useTheme } from 'styled-components';
 
 const Icons = (props: IconsProps) => {
-  const { type, onChange } = props;
+  const { type, color, size, style, onPress } = props;
   const theme = useTheme();
 
   const iconProps = {
-    color: theme.colors.white,
-    onPress: onChange,
-    size: 20,
-    ...props,
+    size: size || 20,
+    color: color || theme.colors.white,
+    style: style as StyleProp<TextStyle>,
+    onPress,
   };
 
   switch (type) {

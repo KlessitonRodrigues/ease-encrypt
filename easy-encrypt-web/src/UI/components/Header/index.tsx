@@ -20,11 +20,9 @@ const Header = () => {
       <Right>
         <LangSwitch onClick={() => setLang(langSwitch(lang))}>{lang.type}</LangSwitch>
         <Icons
-          type={themeType.darkTheme ? 'moon-fill' : 'moon'}
-          marginX={4}
-          marginY={0}
           size={7}
-          onChange={() => setThemeType({ ...themeType, darkTheme: !themeType.darkTheme })}
+          type={themeType.darkTheme ? 'moon-fill' : 'moon'}
+          onPress={() => setThemeType({ ...themeType, darkTheme: !themeType.darkTheme })}
         />
         <GitHub href="https://github.com/KlessitonRodrigues/easy-encrypt" target="_blank">
           <Icons type="gh-logo" size={9} />

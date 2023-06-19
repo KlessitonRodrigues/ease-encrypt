@@ -18,11 +18,13 @@ const EncryptPanel = (props: EncryptPanelProps) => {
       <Input
         label={text.textInput}
         value={form.inputText}
+        placeHolder="Insert any text content"
         onChange={inputText => setForm({ ...form, inputText })}
       />
       <Input
         label={text.passwordInput}
         value={form.password}
+        placeHolder="Insert a password"
         onChange={password => setForm({ ...form, password })}
       />
 
@@ -58,7 +60,13 @@ const EncryptPanel = (props: EncryptPanelProps) => {
         />
       </Row>
 
-      <Input type="textArea" label={text.resultInput} value={form.outputText} readonly />
+      <Input
+        type="textArea"
+        placeHolder="Your encryted or decrypted text will be displayed here."
+        label={text.resultInput}
+        value={form.outputText}
+        readonly
+      />
       <Button
         iconLeft={<Icons type="copy" color="gray" />}
         label={text.copyButton}

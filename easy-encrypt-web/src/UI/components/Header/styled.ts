@@ -40,7 +40,6 @@ export const Icon = styled.div(
 export const Title = styled.div(
   ({ theme }) => css`
     font-size: ${theme.fontSize.h1};
-    margin-bottom: ${theme.size(1)};
   `
 );
 
@@ -50,6 +49,7 @@ export const LangSwitch = styled.div(
     font-weight: bold;
     cursor: pointer;
     font-size: ${theme.fontSize.body};
+    margin: 0 ${theme.size(2)};
   `
 );
 

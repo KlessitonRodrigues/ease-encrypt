@@ -49,9 +49,8 @@ type IfProps = {
 type IconsProps = {
   color?: string;
   size?: number;
-  marginY?: number;
-  marginX?: number;
-  onChange?: () => void;
+  style?: React.CSSProperties;
+  onPress?: () => void;
   type:
     | 'lock'
     | 'lock-fill'

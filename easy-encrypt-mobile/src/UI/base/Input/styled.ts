@@ -26,7 +26,7 @@ export const InputField = styled.TextInput<{ type: InputProps['type'] }>(
     font-size: ${theme.fontSize.body};
     font-weight: bold;
     color: ${theme.colors.text2};
-    background-color: ${theme.colors.bg2};
+    background-color: ${theme.colors.bg3};
     border-radius: ${theme.radius.medium};
 
     ${() => {

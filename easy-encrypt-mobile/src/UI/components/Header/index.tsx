@@ -13,14 +13,14 @@ const Header = () => {
     <Container>
       <Row>
         <Icons type="lock" size={26} />
-        <Title>Easy Encrypt</Title>
+        <Title>EncryptEasy</Title>
       </Row>
       <Row>
         <LangSwitch onPress={() => setLang(langSwitch(lang))}>{lang.type}</LangSwitch>
         <Icons
-          type={themeType.darkTheme ? 'moon-fill' : 'moon'}
           size={26}
-          onChange={() => setThemeType({ ...themeType, darkTheme: !themeType.darkTheme })}
+          type={themeType.darkTheme ? 'moon-fill' : 'moon'}
+          onPress={() => setThemeType({ ...themeType, darkTheme: !themeType.darkTheme })}
         />
       </Row>
     </Container>
