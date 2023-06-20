@@ -32,3 +32,11 @@ test('Should throw an error if there is not PRIVATE_KEY', () => {
   }
   testEnviroment();
 });
+
+test('Should return an empty string when there is not valid text or password', () => {
+  const noTextResult = textEncrypt({ text: '', password: '123' });
+  expect(noTextResult).toBeFalsy();
+
+  const noPasswordResult = textEncrypt({ text: 'TESTING', password: '' });
+  expect(noPasswordResult).toBeFalsy();
+});

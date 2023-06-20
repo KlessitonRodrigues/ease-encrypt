@@ -1,21 +1,12 @@
-import { AES } from 'crypto-js';
+import { encrypt } from './services/encrypt';
+import { encryptWithPrivateKey } from './services/encryptWithKey';
 
-const encrypt = (args: TextDecryptArgs) => {
-  const { text, password } = args;
-  return AES.encrypt(text, password).toString();
-};
+export const textEncrypt = (args: TextEncryptArgs): string => {
+  const { text, password, usePrivateKey } = args;
 
-const encryptWithPrivateKey = (args: TextDecryptArgs) => {
-  const { text, password } = args;
-  const privateKey = process.env.CLIENT_PRIVATE_KEY;
-  if (!privateKey) throw Error('privateKeyNotFound');
+  if (!text || !password) return '';
 
-  const userText = AES.encrypt(text, password).toString();
-  return AES.encrypt(userText, privateKey).toString();
-};
-
-export const textEncrypt = (args: TextEncryptArgs) => {
-  const { usePrivateKey } = args;
   if (usePrivateKey) return encryptWithPrivateKey(args);
+
   return encrypt(args);
 };
