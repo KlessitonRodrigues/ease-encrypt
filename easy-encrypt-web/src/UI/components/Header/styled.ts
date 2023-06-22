@@ -50,6 +50,7 @@ export const LangSwitch = styled.div(
     font-weight: bold;
     cursor: pointer;
     font-size: ${theme.fontSize.body};
+    margin: 0 ${theme.size(2)};
   `
 );
 

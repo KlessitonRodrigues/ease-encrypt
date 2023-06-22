@@ -10,13 +10,23 @@ import { Container, OptionContainer, OptionTitle, Row } from './styled';
 
 const EncryptPanel = (props: EncryptPanelProps) => {
   const { lang } = props;
-  const text = lang.text.page.home;
   const [form, setForm] = useState(initialData);
+  const text = lang.text.page.home;
 
   return (
     <Container>
-      <Input label={text.textInput} onChange={inputText => setForm({ ...form, inputText })} />
-      <Input label={text.passwordInput} onChange={password => setForm({ ...form, password })} />
+      <Input
+        label={text.textInput}
+        value={form.inputText}
+        placeHolder="Insert any text content"
+        onChange={inputText => setForm({ ...form, inputText })}
+      />
+      <Input
+        label={text.passwordInput}
+        value={form.password}
+        placeHolder="Insert a password"
+        onChange={password => setForm({ ...form, password })}
+      />
 
       <OptionContainer>
         <OptionTitle>{text.encryptType}</OptionTitle>
@@ -50,7 +60,13 @@ const EncryptPanel = (props: EncryptPanelProps) => {
         />
       </Row>
 
-      <Input type="textArea" label={text.resultInput} value={form.outputText} readonly />
+      <Input
+        type="textArea"
+        placeHolder="Your encryted or decrypted text will be displayed here."
+        label={text.resultInput}
+        value={form.outputText}
+        readonly
+      />
       <Button
         iconLeft={<Icons type="copy" color="gray" />}
         label={text.copyButton}
