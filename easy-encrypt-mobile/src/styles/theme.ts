@@ -1,5 +1,4 @@
 import { atlassianColors, materialColors } from './lib/palettes';
-import screenSizes from './lib/screenSizes';
 
 export const defaultTheme: Theme = {
   size: (n: number) => `${n * 2}px`,

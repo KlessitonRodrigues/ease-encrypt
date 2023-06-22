@@ -40,6 +40,16 @@ export const Icon = styled.div(
 export const Title = styled.div(
   ({ theme }) => css`
     font-size: ${theme.fontSize.h1};
+    margin-bottom: ${theme.size(1)};
+  `
+);
+
+export const LangSwitch = styled.div(
+  ({ theme }) => css`
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: ${theme.fontSize.body};
   `
 );
 
