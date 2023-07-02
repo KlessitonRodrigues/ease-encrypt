@@ -14,17 +14,10 @@ type Theme = {
     gray: string;
     yellow: string;
     red: string;
+    blue: string;
     green: string;
     white: string;
     black: string;
-  };
-  shadow: {
-    low: string;
-    medium: string;
-    high: string;
-    mediumGray: string;
-    mediumLeft: string;
-    lowRight: string;
   };
   radius: {
     verySmall: string;
@@ -44,6 +37,14 @@ type Theme = {
     h4: string;
     h5: string;
     h6: string;
+  };
+  shadow: {
+    low: string;
+    medium: string;
+    high: string;
+    mediumGray: string;
+    mediumLeft: string;
+    lowRight: string;
   };
   devices: {
     mobileS: string;

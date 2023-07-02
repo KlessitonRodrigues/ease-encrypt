@@ -1,6 +1,6 @@
 import { atlassianColors, materialColors } from './lib/palettes';
 
-export const defaultTheme: Theme = {
+export const defaultTheme: MobileTheme = {
   size: (n: number) => `${n * 2}px`,
   colors: {
     main: atlassianColors.blue['600'],
@@ -16,6 +16,7 @@ export const defaultTheme: Theme = {
     gray: materialColors.grey['500'],
     yellow: atlassianColors.yellow['600'],
     red: atlassianColors.red['800'],
+    blue: atlassianColors.blue['600'],
     green: materialColors.lightGreen['800'],
     white: materialColors.grey['300'],
     black: materialColors.black,
@@ -39,32 +40,14 @@ export const defaultTheme: Theme = {
     large: '8px',
     full: '50%',
   },
-  shadow: {
-    low: '',
-    medium: '',
-    high: '',
-    mediumGray: '',
-    lowRight: '',
-    mediumLeft: '',
-  },
-  devices: {
-    mobileS: '',
-    mobileM: '',
-    mobileL: '',
-    tablet: '',
-    laptopS: '',
-    laptopM: '',
-    laptopL: '',
-    desktopS: '',
-    desktopM: '',
-    desktopL: '',
-  },
 };
 
 export const defaultThemeDark = {
   ...defaultTheme,
   colors: {
     ...defaultTheme.colors,
+    main: atlassianColors.blue['500'],
+    mainBg: atlassianColors.blue['600'],
     bg1: materialColors.black,
     bg2: materialColors.grey['800'] + '44',
     bg3: materialColors.grey['700'] + '44',

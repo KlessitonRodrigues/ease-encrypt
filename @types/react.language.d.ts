@@ -1,6 +1,6 @@
 type LanguageOptions = 'en' | 'pt';
 
-type MobileLanguageDefinition = {
+type LangContent = {
   page: {
     home: {
       textInput: string;

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="400" style="stroke: rgb(0, 0, 0); fill: rgb(49, 49, 49);"/>
-  <path d="M 235.799 161.448 L 235.799 113.057 C 235.799 81.686 202.349 62.079 175.589 77.765 C 163.17 85.044 155.519 98.497 155.519 113.057 L 155.519 161.448" stroke-linecap="round" stroke-linejoin="round" style="stroke: rgb(255, 255, 255); stroke-width: 16px;" fill="none"/>
-  <rect x="115.38" y="161.447" width="160.559" height="138.553" rx="48" ry="48" stroke-linecap="round" stroke-linejoin="round" style="stroke: rgb(255, 255, 255); stroke-width: 16px;" fill="none"/>
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <filter id="drop-shadow-filter-0" color-interpolation-filters="sRGB" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="drop-shadow 1 9 9 9 1 rgba(255,255,255,0.3)">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dx="9" dy="9"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="2"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(255,255,255,0.3)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" style="stroke: rgb(0, 0, 0);"/>
+  <path d="M 235.799 161.448 L 235.799 113.057 C 235.799 81.686 202.349 62.079 175.589 77.765 C 163.17 85.044 155.519 98.497 155.519 113.057 L 155.519 161.448" stroke-linecap="round" stroke-linejoin="round" style="stroke-width: 16px; stroke: rgb(238, 238, 238); filter: url(#drop-shadow-filter-0);" fill="none"/>
+  <rect x="115.38" y="161.447" width="160.559" height="138.553" rx="30.098" ry="30.098" stroke-linecap="round" stroke-linejoin="round" style="stroke-width: 16px; stroke: rgb(238, 238, 238); filter: url(#drop-shadow-filter-0);" fill="none"/>
 </svg>
