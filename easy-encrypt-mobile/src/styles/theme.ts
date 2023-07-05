@@ -1,10 +1,10 @@
 import { atlassianColors, materialColors } from './lib/palettes';
 
-export const defaultTheme: MobileTheme = {
+export const defaultTheme: Theme = {
   size: (n: number) => `${n * 2}px`,
   colors: {
-    main: atlassianColors.blue['600'],
-    mainBg: atlassianColors.blue['700'],
+    main: atlassianColors.blueGray['600'],
+    mainBg: atlassianColors.blueGray['800'],
     bg1: materialColors.grey['50'],
     bg2: materialColors.grey['100'],
     bg3: materialColors.grey['200'],
@@ -18,7 +18,7 @@ export const defaultTheme: MobileTheme = {
     red: atlassianColors.red['800'],
     blue: atlassianColors.blue['600'],
     green: materialColors.lightGreen['800'],
-    white: materialColors.grey['300'],
+    white: materialColors.grey['100'],
     black: materialColors.black,
   },
   fontSize: {
@@ -29,8 +29,8 @@ export const defaultTheme: MobileTheme = {
     h5: '18px',
     h6: '17px',
     body: '16px',
-    label: '14px',
-    small: '15px',
+    label: '15px',
+    small: '14px',
     verySmall: '13px',
   },
   radius: {
@@ -46,8 +46,8 @@ export const defaultThemeDark = {
   ...defaultTheme,
   colors: {
     ...defaultTheme.colors,
-    main: atlassianColors.blue['500'],
-    mainBg: atlassianColors.blue['600'],
+    main: atlassianColors.blueGray['500'],
+    mainBg: atlassianColors.blueGray['800'],
     bg1: materialColors.black,
     bg2: materialColors.grey['800'] + '44',
     bg3: materialColors.grey['700'] + '44',

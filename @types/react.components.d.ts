@@ -75,5 +75,5 @@ type AnimationsProps = {
 };
 
 type EncryptPanelProps = {
-  lang: LangState<MobileLang>;
+  lang: LangState;
 };

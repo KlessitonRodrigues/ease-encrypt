@@ -38,7 +38,7 @@ type Theme = {
     h5: string;
     h6: string;
   };
-  shadow: {
+  shadow?: {
     low: string;
     medium: string;
     high: string;
@@ -46,7 +46,7 @@ type Theme = {
     mediumLeft: string;
     lowRight: string;
   };
-  devices: {
+  devices?: {
     mobileS: string;
     mobileM: string;
     mobileL: string;

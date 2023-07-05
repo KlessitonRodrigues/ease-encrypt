@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg class="ionicon" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <defs>
-    <filter id="outline-filter-0" color-interpolation-filters="sRGB" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="outline 1 10 rgba(145,145,145,1)">
-      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="10"/>
-      <feFlood flood-color="rgba(145,145,145,1)" result="flood"/>
+    <filter id="outline-filter-0" color-interpolation-filters="sRGB" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="outline 1 5 rgba(84,83,83,1)">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="5"/>
+      <feFlood flood-color="rgba(84,83,83,1)" result="flood"/>
       <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
       <feMerge>
         <feMergeNode in="outline"/>
@@ -11,7 +11,7 @@
       </feMerge>
     </filter>
   </defs>
-  <path d="M 682.602 528 L 682.602 433 C 682.602 371.416 615.935 332.926 562.602 363.718 C 537.85 378.009 522.602 404.419 522.602 433 L 522.602 528" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" fill="none" style="stroke: rgb(255, 255, 255); filter: url(#outline-filter-0);"/>
-  <rect x="442.602" y="528" width="320" height="272" rx="48" ry="48" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" style="stroke: rgb(255, 255, 255); filter: url(#outline-filter-0); fill: rgb(145, 145, 145);"/>
-  <rect x="583.499" y="625.738" width="35.23" height="96.363" style="stroke-linejoin: round; fill: rgb(255, 255, 255);" rx="15.542" ry="15.542"/>
+  <path d="M 681.752 542.581 L 681.752 447.581 C 681.752 385.997 615.085 347.507 561.752 378.299 C 537 392.59 521.752 419 521.752 447.581 L 521.752 542.581" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" style="stroke: rgb(232, 232, 232); filter: url(#outline-filter-0);" fill="none"/>
+  <rect x="450.227" y="542.581" width="295.989" height="272" rx="52.436" ry="52.436" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" style="filter: url(#outline-filter-0); stroke: rgb(84, 83, 83); fill: rgb(84, 83, 83);"/>
+  <rect x="584.151" y="646.623" width="26.576" height="83.295" style="stroke-linejoin: round; fill: rgb(255, 255, 255); stroke-width: 2px; stroke: rgb(223, 223, 223);" rx="9.45" ry="9.45"/>
 </svg>
