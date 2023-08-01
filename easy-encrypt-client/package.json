@@ -23,9 +23,6 @@
     "ts-jest": "29.1.0",
     "webpack": "5.73.0"
   },
-  "workspaces": {
-    "nohoist": []
-  },
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",

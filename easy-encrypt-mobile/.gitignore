@@ -1,0 +1,7 @@
+# FOLDERS
+node_modules/
+.expo/
+
+# FILES
+*.apk
+*.log

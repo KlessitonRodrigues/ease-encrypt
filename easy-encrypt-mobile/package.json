@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "13.0.0",
-    "easy-encrypt-client": "1.0.0",
+    "easy-encrypt-client": "file:../easy-encrypt-client",
     "expo": "48.0.19",
     "expo-clipboard": "4.1.2",
     "expo-status-bar": "1.4.4",
@@ -26,11 +26,5 @@
     "@types/styled-components-react-native": "5.2.1",
     "eas-cli": "3.13.2"
   },
-  "private": true,
-  "workspaces": {
-    "nohoist": [
-      "expo",
-      "@expo/vector-icons"
-    ]
-  }
+  "private": true
 }
