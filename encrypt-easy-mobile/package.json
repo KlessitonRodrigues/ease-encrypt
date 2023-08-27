@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "13.0.0",
-    "easy-encrypt-client": "file:../easy-encrypt-client",
+    "encrypt-easy-client": "file:../encrypt-easy-client",
     "expo": "48.0.19",
     "expo-clipboard": "4.1.2",
     "expo-status-bar": "1.4.4",
