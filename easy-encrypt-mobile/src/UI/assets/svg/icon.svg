@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="400" style="stroke: rgb(0, 0, 0); fill: rgb(49, 49, 49);"/>
-  <path d="M 235.799 161.448 L 235.799 113.057 C 235.799 81.686 202.349 62.079 175.589 77.765 C 163.17 85.044 155.519 98.497 155.519 113.057 L 155.519 161.448" stroke-linecap="round" stroke-linejoin="round" style="stroke: rgb(255, 255, 255); stroke-width: 16px;" fill="none"/>
-  <rect x="115.38" y="161.447" width="160.559" height="138.553" rx="48" ry="48" stroke-linecap="round" stroke-linejoin="round" style="stroke: rgb(255, 255, 255); stroke-width: 16px;" fill="none"/>
-</svg>
