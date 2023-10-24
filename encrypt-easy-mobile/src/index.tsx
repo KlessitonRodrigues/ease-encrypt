@@ -1,7 +1,7 @@
 import Router from './UI/router';
 import { GlobalProvider } from './hooks/useGlobalContext';
 import { LanguageProvider } from './hooks/useLangContext';
-import { RouteProvider } from './hooks/usePathContext';
+import { RoutesProvider } from './hooks/useRoutesContext';
 import { ThemeTypeProvider } from './hooks/useThemeTypeContext';
 
 const App = () => {
@@ -9,9 +9,9 @@ const App = () => {
     <GlobalProvider>
       <LanguageProvider>
         <ThemeTypeProvider>
-          <RouteProvider>
+          <RoutesProvider>
             <Router />
-          </RouteProvider>
+          </RoutesProvider>
         </ThemeTypeProvider>
       </LanguageProvider>
     </GlobalProvider>

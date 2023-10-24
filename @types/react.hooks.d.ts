@@ -1,9 +1,9 @@
-// usePathContext
-type PathState = {
-  address: string;
+type UseRoutesContext = {
+  path: string;
+  lang: string;
+  setPath: React.Dispatch<App.Utils.Paths>;
+  setLang: React.Dispatch<string>;
 };
-
-type PathContext = [PathState, React.Dispatch<React.SetStateAction<PathState>>];
 
 // useGlobalContext
 type GlobalState = {};

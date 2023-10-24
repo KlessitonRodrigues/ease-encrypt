@@ -1,5 +1,5 @@
 {
-  "name": "ease-encrypt-web",
+  "name": "encrypt-easy-web",
   "version": "1.0.0",
   "main": "dist/web/index.js",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
     "@types/styled-components": "5.1.26",
-    "easy-encrypt-client": "file:../easy-encrypt-client",
+    "encrypt-easy-client": "file:../encrypt-easy-client",
     "html-webpack-plugin": "5.5.0",
     "http-server": "14.1.1",
     "prettier": "2.7.0",

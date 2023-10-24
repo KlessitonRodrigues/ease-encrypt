@@ -8,7 +8,7 @@ export const Container = styled.View<{ checked: boolean }>(
     border-radius: ${theme.radius.medium};
     background-color: ${theme.colors.bg3};
     ${checked && `background-color: ${theme.colors.bg1}`};
-    ${checked && `border-color: ${theme.colors.main}`};
+    ${checked && `border: 1px solid ${theme.colors.text4}`};
   `
 );
 

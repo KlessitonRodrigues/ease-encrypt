@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./src/UI/assets/png/icon.png",
     "userInterfaceStyle": "automatic",
+    "experiments": { "tsconfigPaths": true },
     "splash": {
       "image": "./src/UI/assets/png/splash.png",
       "resizeMode": "contain",

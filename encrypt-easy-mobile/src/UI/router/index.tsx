@@ -1,11 +1,11 @@
-import usePathContext from 'src/hooks/usePathContext';
+import usePathContext from 'src/hooks/useRoutesContext';
 
 import HomePage from '../pages/Home';
 
 const Router = () => {
-  const [path] = usePathContext();
+  const { path, setPath } = usePathContext();
 
-  switch (path.address) {
+  switch (path) {
     case '/home':
       return <HomePage />;
     default:

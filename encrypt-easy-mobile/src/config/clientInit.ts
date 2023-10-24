@@ -1,4 +1,4 @@
 // @ts-ignore
-import clientInit from 'easy-encrypt-client';
+import clientInit from 'encrypt-easy-client';
 
 export const client: AppClient = clientInit();

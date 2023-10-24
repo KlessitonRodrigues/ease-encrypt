@@ -29,15 +29,11 @@ export const InputField = styled.TextInput<{ type: InputProps['type'] }>(
     background-color: ${theme.colors.bg3};
     border-radius: ${theme.radius.medium};
 
-    ${() => {
-      switch (type) {
-        case 'textArea':
-          return css`
-            flex: 1;
-            vertical-align: top;
-            max-height: 100%;
-          `;
-      }
-    }}
+    ${type === 'textArea' &&
+    css`
+      flex: 1;
+      max-height: 100%;
+      vertical-align: top;
+    `}
   `
 );

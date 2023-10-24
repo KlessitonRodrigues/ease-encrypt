@@ -1,4 +1,4 @@
-import useLangContext from 'src/hooks/useLangContext';
+import useRoutesContext from 'src/hooks/useRoutesContext';
 import useThemeTypeContext from 'src/hooks/useThemeTypeContext';
 
 import Icons from '../../base/Icons';
@@ -6,7 +6,7 @@ import { langSwitch } from './service/langSwitch';
 import { Container, LangSwitch, Row, Title } from './styled';
 
 const Header = () => {
-  const [lang, setLang] = useLangContext();
+  const { lang, setLang } = useRoutesContext();
   const [themeType, setThemeType] = useThemeTypeContext();
 
   return (
@@ -16,7 +16,7 @@ const Header = () => {
         <Title>EncryptEasy</Title>
       </Row>
       <Row>
-        <LangSwitch onPress={() => setLang(langSwitch(lang))}>{lang.type}</LangSwitch>
+        <LangSwitch onPress={() => setLang(langSwitch(lang))}>{lang}</LangSwitch>
         <Icons
           size={26}
           type={themeType.darkTheme ? 'moon-fill' : 'moon'}
